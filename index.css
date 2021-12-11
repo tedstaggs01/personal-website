@@ -4,6 +4,17 @@ body {
 
 .logo {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    background-color: #50A5FF;
+    font-size: 90px;
+    padding: 200px 200px 200px 200px;
+    margin-top: 200px;
+}
+
+.contact {
+    padding: 100px 100px 100px 100px;
+    margin-bottom: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: #C5DAF0;
 }
