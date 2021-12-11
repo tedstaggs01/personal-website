@@ -9,6 +9,7 @@ body {
     font-size: 90px;
     padding: 200px 200px 200px 200px;
     margin-top: 200px;
+    border-radius: 50px;
 }
 
 .contact {
