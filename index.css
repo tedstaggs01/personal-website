@@ -19,7 +19,7 @@ body {
     font-size: 20px;
     background-color: #649BD5;
     border-radius: 40px;
-    animation: example 4 infinite;
+    animation: example 4s infinite;
 }
 
 @keyframes example {
