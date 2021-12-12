@@ -4,6 +4,7 @@ nav {
     margin-bottom: 10px;
 }
 
-body {
+a {
+    color: white;
     text-decoration: none;
 }
