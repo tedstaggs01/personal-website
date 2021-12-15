@@ -15,7 +15,8 @@ nav {
     margin-top: 30px;
     text-align: center;
     align-items: center;
-    width: 20px;
+    width: 100%;
+    padding: 30px;
 }
 
 footer {
