@@ -6,7 +6,9 @@ nav {
 
 .intro {
     text-align: center;
-    padding: 100%;
+    width: 100%;
+    background-color: #A5CAFF;
+    height: 500px;
 }
 
 .socials {
