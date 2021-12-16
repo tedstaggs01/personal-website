@@ -12,7 +12,6 @@ nav {
     text-align: center;
     height: 90%;
     width: 100%;
-    background-color: #A5CAFF;
     padding: 50px;
 }
 
@@ -35,7 +34,7 @@ nav {
     width: 80%;
     margin: auto;
     padding: 20px;
-    background-color: cornflowerblue;
+    background-color: #B23850;
     border-radius: 10px;
     text-decoration: none;
 }
@@ -51,6 +50,6 @@ a:hover {
 
 footer {
     margin-top: 450px;
-    background-color: #d2d2d7;
+    background-color: #8590AA;
 }
 
