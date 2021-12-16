@@ -4,7 +4,17 @@ nav {
     margin-bottom: 10px;
 }
 
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
 footer {
     margin-top: 450px;
     background-color: #d2d2d7;
 }
+
