@@ -1,5 +1,5 @@
 body {
-    background-color: #3B8BEB;
+    background-color:   #3B8BEB;
 }
 
 nav {
@@ -12,14 +12,12 @@ nav {
     text-align: center;
     height: 90%;
     width: 100%;
-    padding: 50px;
+    padding: 400px;
+    background-color: #3B8BEB;
 }
 
-#know {
-    padding-top: 30px;
-    font-size: 50px;
-    border-width: 3px;
-    border-color: black;
+.know {
+    font-size: 40px;
 }
 
 #connect {
@@ -49,7 +47,8 @@ a:hover {
 }
 
 footer {
-    margin-top: 450px;
+    margin-top: 500px;
     background-color: #8590AA;
+    padding: 30px;
 }
 
