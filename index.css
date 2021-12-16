@@ -21,6 +21,18 @@ nav {
 
 .know {
     font-size: 40px;
+    border: 2px solid white;
+    background-color: #3B8BEB;
+    color: white;
+    transition: 0.5s;
+    background: linear-gradient(to left, #3B8BEB 50%, white 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+button:hover {
+    background-position: left;
+    color: #3B8BEB;
 }
 
 #connect {
