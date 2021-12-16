@@ -3,9 +3,9 @@ body {
 }
 
 nav {
-    margin-top: 10px;
-    margin-left: 10px;
     margin-bottom: 10px;
+    padding: 40px;
+    font-size: 25px;
 }
 
 .intro {
