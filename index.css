@@ -6,10 +6,15 @@ nav {
 
 .intro {
     text-align: center;
-    height: 80%;
+    height: 90%;
     width: 100%;
     background-color: #A5CAFF;
-    padding: 100px;
+    padding: 50px;
+}
+
+#know {
+    
+
 }
 
 #connect {
