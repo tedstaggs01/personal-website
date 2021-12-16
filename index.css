@@ -41,6 +41,22 @@ button:hover {
     text-align: center;
 }
 
+.about {
+    width: 100%;
+    height: 50%;
+    padding: 100px;
+    text-align: center;
+}
+
+.projects {
+    width: 100%;
+    height: 50%;
+    background-color: #90CCF4;
+    padding: 100px;
+    text-align: center;
+}
+
+
 .socials {
     text-align: center;
     align-items: center;
