@@ -8,3 +8,19 @@
     background-color:#3B8BEB;
 }
 
+.know {
+    border: 2px solid white;
+    background-color: #3B8BEB;
+    color: white;
+    background: linear-gradient(to left, #3B8BEB 50%, white 50%) right;
+    transition: 0.5s ease-out;
+
+}
+
+button:hover {
+    background-position: left;
+    color: #3B8BEB;
+}
+
+
+
