@@ -16,6 +16,20 @@ body {
     padding-top: 25vh;
 }
 
+#change {
+    animation: change 5s infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes change {
+    0% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
+
 .know {
     border: 2px solid white;
     font-size: 5vw;
