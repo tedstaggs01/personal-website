@@ -64,4 +64,16 @@ button:hover {
     color: #3B8BEB;
 }
 
+.note {
+    background-color: #C6FF7F;
+    color: #467D00;
+    font-size: 2vw;
+    border: 1px solid #467D00;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1vh;
+    border-radius: 1%;
+    margin: 5vh;
+}
+
 
