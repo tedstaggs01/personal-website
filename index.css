@@ -16,9 +16,25 @@ body {
     padding-top: 25vh;
 }
 
+.fly {
+    animation: fly 1s;
+    animation-timing-function: ease-in;
+}
+
 #change {
     animation: change 5s infinite;
     animation-timing-function: ease-in;
+}
+
+@keyframes fly {
+    0%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 @keyframes change {
