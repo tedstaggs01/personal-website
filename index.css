@@ -23,7 +23,8 @@ body {
 
 #change {
     animation: change 5s infinite;
-    animation-timing-function: ease-in;
+    animation-timing-function: cubic-bezier(0, 0.99, 0.26,-0.54);
+
 }
 
 @keyframes fly {
