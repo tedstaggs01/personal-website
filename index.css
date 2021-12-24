@@ -54,13 +54,17 @@ body {
     border: 2px solid white;
     font-size: 5vw;
     font-weight: 900;
-    background-color: #3B8BEB;
+    display: inline-block;
     color: white;
+    background-color: #3B8BEB;
+    background: linear-gradient(to left, #3B8BEB 50%, white 50%) right;
+    transition: .5s ease-out;
+    background-size: 200%;
 
 }
 
 button:hover {
-    background-color: white;
+    background-position: left;
     color: #3B8BEB;
 }
 
