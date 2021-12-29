@@ -81,10 +81,10 @@ button:hover {
 }
 
 .domain {
-    background-color: #C6FF7F;
-    color: #467D00;
+    background-color: #ff2336;
+    color: white;
     font-size: 2vw;
-    border: 1px solid #467D00;
+    border: 1px solid black;
     font-family: Montserrat, sans-serif;
     text-align: center;
     padding: 1vh;
