@@ -86,9 +86,10 @@ button:hover {
 }
 
 img{
-    width: 1748px;
-    height: 1240px;
-    padding: 10px;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 .deal {
