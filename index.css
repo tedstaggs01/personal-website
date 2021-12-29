@@ -80,4 +80,16 @@ button:hover {
     margin: 5vh;
 }
 
+.domain {
+    background-color: #C6FF7F;
+    color: #467D00;
+    font-size: 2vw;
+    border: 1px solid #467D00;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    padding: 1vh;
+    border-radius: 1%;
+    margin: 5vh;
+}
+
 
