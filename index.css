@@ -85,10 +85,14 @@ button:hover {
     font-size: 1px;
 }
 
-.hi, img{
+img{
     width: 1748px;
     height: 1240px;
     padding: 10px;
+}
+
+.deal {
+    margin: auto;
 }
 
 .domains {
