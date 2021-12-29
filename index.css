@@ -108,6 +108,12 @@ img{
     margin-bottom: 100px;
 }
 
+#connect {
+    background-color: seagreen;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
 
 .domain {
     background-color: #ff2336;
