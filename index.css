@@ -85,7 +85,7 @@ button:hover {
     font-size: 1px;
 }
 
-img{
+.deal img{
     width: 75%;
     height: auto;
     display: block;
@@ -127,6 +127,20 @@ img{
     margin: 5vh;
     animation: yolo 5s infinite;
 }
+
+.feedback img{
+    border-radius: 50%;
+    width: 10%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.feedback {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+
 /*
 
 @keyframes yolo {
