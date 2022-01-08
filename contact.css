@@ -1,24 +1,36 @@
 body {
-    background-color:   #3B8BEB;
+    background-color: coral;
 }
 
-nav {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+.wrap {
+    background: black ;
 }
 
-a:link {
-    color: black;
-    text-decoration: none;
+.box {
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    animation: example 3s infinite;
 }
 
-a:hover {
-    color: white;
-}
-
-footer {
-    margin-top: 450px;
-    background-color: #d2d2d7;
-}
-
+@keyframes example {
+    0%   {
+        background-color: red;
+        transform: rotateX(150deg); 
+    }
+    25%  {
+        background-color: yellow;
+        transform: rotateY(150deg); 
+    }
+    50%  {
+        background-color: blue;
+        transform: rotateZ(90deg)
+    }
+    100% {
+        background-color: green;
+    }
+  }
+  
