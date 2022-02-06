@@ -138,29 +138,6 @@ button:hover {
     font-family: Montserrat, sans-serif;
 }
 
-/*
-
-@keyframes yolo {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-
-}
-
-*/
-
 .container {
     background-color: #3B8BEB;
     padding: 1vh;
@@ -168,4 +145,5 @@ button:hover {
     font-family: Montserrat, sans-serif;
     font-size: 1vh;
     text-align: center;
+    width: 100%;
 }
