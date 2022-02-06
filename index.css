@@ -163,3 +163,12 @@ button:hover {
 }
 
 */
+
+.container {
+    background-color: #3B8BEB;
+    padding: 1vh;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 1vh;
+    text-align: center;
+}
