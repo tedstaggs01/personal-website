@@ -119,12 +119,9 @@ button:hover {
     background-color: #ff2336;
     color: white;
     font-size: 2vw;
-    border: 1px solid black;
     font-family: Montserrat, sans-serif;
     text-align: center;
     padding: 1vh;
-    border-radius: 1%;
-    margin: 5vh;
     animation: yolo 5s infinite;
 }
 
