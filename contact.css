@@ -4,6 +4,7 @@ body {
 
 .wrap {
     background: black ;
+    transform: coral 3s;
 }
 
 .box {
@@ -13,24 +14,45 @@ body {
     margin: 5px;
     vertical-align: middle;
     display: inline-block;
-    animation: example 3s infinite;
+    border-radius: 100%;
+    background-color: palevioletred;
+    animation: top 3s infinite;
+   /* animation: example 3s infinite; */
+}
+
+@keyframes top {
+    50% {
+        transform: translateX(100px);
+        transform: scale3d(2.0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
 }
 
 @keyframes example {
     0%   {
         background-color: red;
         transform: rotateX(150deg); 
+        transform: scaleZ(100deg);
     }
     25%  {
         background-color: yellow;
         transform: rotateY(150deg); 
+        transform: skewX(30deg);
     }
     50%  {
         background-color: blue;
-        transform: rotateZ(90deg)
+        transform: rotateZ(90deg);
+        transform: translateX(10px);
+        border-radius: 100%;
+    }
+    75% {
+        background-color: palevioletred;
+        border-radius: 5%;
     }
     100% {
-        background-color: green;
+        background-color: coral;
     }
   }
   
