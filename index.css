@@ -23,7 +23,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   animation-name: example;
   animation-iteration-count: infinite;
-  animation-duration: .5s;
+  animation-duration: 4s;
 }
 
 .connect1 {
@@ -43,7 +43,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   animation-name: example2;
   animation-iteration-count: infinite;
-  animation-duration: .5s;
+  animation-duration: 2s;
 }
 
 
