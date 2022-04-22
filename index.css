@@ -1,5 +1,7 @@
 body {
-  background-color: aquamarine;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -7,9 +9,10 @@ h1 {
   margin-top: 20px;
   padding: 30px;
   background-color: #7EBF2B;
-  animation-name: example;
+  animation-name: example2;
   animation-iteration-count: infinite;
-  animation-duration: 1s;
+  animation-duration: 5s;
+  border-radius: 20%;
 }
 
 #gg {
@@ -23,6 +26,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   animation-name: example;
   animation-iteration-count: infinite;
+  border-radius: 100%;
   animation-duration: 4s;
 }
 
@@ -33,6 +37,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   animation-name: example1;
   animation-iteration-count: infinite;
+  border-radius: 50%;
   animation-duration: .5s;
 }
 
@@ -43,6 +48,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   animation-name: example2;
   animation-iteration-count: infinite;
+  border-radius: 60%;
   animation-duration: 2s;
 }
 
