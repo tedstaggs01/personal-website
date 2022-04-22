@@ -9,7 +9,6 @@ h1 {
   width: 300px;
   height: 100px;
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
   background-color: #7EBF2B;
   animation-name: example;
   animation-duration: 4s;
