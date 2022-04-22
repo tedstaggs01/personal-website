@@ -9,7 +9,7 @@ h1 {
   background-color: #7EBF2B;
   animation-name: example;
   animation-iteration-count: infinite;
-  animation-duration: .5s;
+  animation-duration: 1s;
 }
 
 #gg {
