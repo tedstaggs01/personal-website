@@ -5,7 +5,10 @@ h1 {
   padding: 30px;
   background-color: #7EBF2B;
 }
-  
+
+#gg {
+  background-color: red;
+}  
 
 .connect {
   width: 300px;
