@@ -1,21 +1,20 @@
 body {
-  background-color: blueviolet;
-  display: flex;
-  align-items: center;
-  animation: example;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  background-color: 
+  #CEFEF6;
+}
+
+
+.sale {
+  background-color: #7EBF2B;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
-  padding: 30px;
-  background-color: #7EBF2B;
-  animation-name: example2;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  border-radius: 20%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #gg {
