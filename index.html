@@ -67,6 +67,11 @@
 
                  var desired = stickD + ferryD + extra + minimum; // desired fuel for start-up
 
+                 if (desired > 332) {
+
+                    alert("Check P.O.H. Fuel Limitations Section 2-9!");
+                }
+
                  var required = desired - fuelA; // fuel required to be fuelled
 
                  // Let us calculate desired fuel to be tanked each tank
@@ -79,9 +84,9 @@
 
                  var requiredL = desiredL - fuelAL;
 
-                 var requiredR = desired - fuelAR;
+                 var requiredR = desiredR - fuelAR;
 
-                 // Output this 
+                 // Output this required R and Left
         }  
     </script>
 </body>
