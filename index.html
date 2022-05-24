@@ -12,15 +12,6 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <script type="text/javascript">
-        function calculate() {
-                 var fuelAR = document.getElementById("fuelAR").value;
-                 var fuelAL = document.getElementById("fuelAL").value;
-                 var fuelA = fuelAR + fuelAL; // fuel available
-                 alert(fuelA);
-                 var fuelS = fuelA + 50 // 
-        } 
-    </script>
     <div class="enterfuel">
         <form>
             <h1>Enter Fuel available in each tank</h1>
@@ -29,11 +20,11 @@
             <label for="fuelAR">Fuel LEFT Tank</label>
             <input type="number" name="fuelAL" id="fuelAL"><br><br>
             <label for="">Enter Stick(s)</label>
-            <input type="number" name="" id=""><br><br>
+            <input type="number" name="stick" id="stick"><br><br>
             <label for="">Enter Ferry(s)</label>
-            <input type="number" name="" id=""><br><br>
+            <input type="number" name="ferry" id="ferry"><br><br>
             <label for="">Enter EXTRA</label>
-            <input type="number" name="" id=""><br><br>
+            <input type="number" name="extra" id="extra"><br><br>
             <input type="button" onclick="calculate()" value="submit">
             <br>
             <br>
@@ -45,5 +36,16 @@
         <h2>-----------------------------------------------------</h2>
         <h3>ADD DISPATCH STYLE</h3>
     </div>
+    <script type="text/javascript">
+        function calculate() {
+                 var fuelAR = document.getElementById("fuelAR").value;
+                 var fuelAL = document.getElementById("fuelAL").value;
+                 var stick = document.getElementById("stick").value;
+                 var ferry = document.getElementById("ferry").value;
+                 var extra = document.getElementById("extra").value;
+                 var fuelA = fuelAR + fuelAL; // fuel available
+                 alert(fuelA);
+        }  
+    </script>
 </body>
 </html>
