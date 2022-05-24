@@ -21,7 +21,6 @@
             <p>Note: Unit given and input must be in litres & AVGAS100LL!</p>
             <p>This calculator serves only as a tool and a recalculation should be considered to make up your own mind</p>
             <hr>
-
         </div>
     </header>
     <div class="enterfuel">
@@ -83,7 +82,8 @@
                     alert("Check P.O.H. Fuel Limitations Section 2-9!");
                 }
                  var required = desired - fuelA; // fuel required to be fuelled
-                 var desiredL, desiredR = desired / 2;
+                 var desiredL = desired / 2;
+                 var desiredR = desired / 2;
                  // fuel desired L equals R thus Fuel is balanced
                  var requiredL = desiredL - fuelAL;
                  console.log(requiredL);
