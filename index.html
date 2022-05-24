@@ -12,6 +12,29 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="sale">WECONNECT.LU DOMAIN is AVAILABLE FOR SALE contact: ted@staggs.lu via mail!</div>
+    <div class="enterfuel">
+        <h1>Enter Fuel available in each tank</h1>
+        <label for="fuelAR">Fuel RIGHT Tank</label>
+        <input type="number" name="fuelAR" id="fuelAR"><br><br>
+        <label for="fuelAL">Fuel LEFT Tank</label>
+        <input type="number" name="fuelAL" id="fuelAL"><br><br>
+        <button type="button"> number of STICKs + number of FERRIES</button>
+        <button onclick="calculate()">Text</button>     
+    </div>
+    <script>
+        function calculate(){
+            let fuelAR; // fuel available right (user input)
+            let fuelAL; // fuel available left (user input)
+            function getVal(){
+                return fuelAR = document.getElementById("fuelAR").value;
+            } 
+            function getVal(){
+                return fuelAL = document.getElementById("fuelAL").value;
+            }
+
+            let fuelA = fuelAR + fuelAL; // fuel available 
+            alert(fuelA);
+        }
+    </script>
 </body>
 </html>
