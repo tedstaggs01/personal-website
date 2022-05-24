@@ -1,15 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>STAGGS</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/theme.css">
+  </head>
 <body>
+    <script defer src="./vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/hs.core.js"></script>
+    <script defer>
+        function calculate() {
+                 var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
+                 var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
+                 var stick = document.getElementById("stick").value; // grap input STICKS desired
+                 var ferry = document.getElementById("ferry").value; // grap input FERRY desired
+                 var extra = document.getElementById("extra").value; // grap input extra desired
+                 var nfuelAR = parseInt(fuelAR);
+                 var nfuelAL = parseInt(fuelAL);
+                 var fuelA = nfuelAR + nfuelAL; // fuel available
+                 var onestick = 50; // Fuel required for 1 Stick
+                 var oneferry = 30; // Fuel required for 1 Ferry
+                 var nstick = parseInt(stick);
+                 var nferry = parseInt(ferry);
+                 var nextra = parseInt(extra);
+                 var stickD = nstick * 50; // Fuel for sticks desired
+                 var ferryD = nferry * 30; // Fuel for ferrys desired
+                 var minimum = 65; // Alternate + Reserve: 20L + 45L 
+                 var desired = stickD + ferryD + nextra + minimum; // desired fuel for start-up
+                 if (desired > 332) {
+
+                    alert("Check P.O.H. Fuel Limitations Section 2-9!");
+                }
+                 var required = desired - fuelA; // fuel required to be fuelled
+                 var desiredL = desired / 2;
+                 var desiredR = desired / 2;
+                 // fuel desired L equals R thus Fuel is balanced
+                 var requiredL = desiredL - fuelAL;
+                 console.log(requiredL);
+                 var requiredR = desiredR - fuelAR;
+                 console.log(requiredR);
+                 // Output this required R and Left 
+                 document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
+                 document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
+        }  
+    </script>
     <header>
         <div class="head">
-            <h1>Calculate Fuel to be fuelled into each tank!</h1>
+            <h1>Calculate <span class="text-primary text-highlight-warning">FUEL</span> to be fuelled into each tank!</h1>
         </div>
         <div class="instructions">
             <p>Concerns pilots who operate LX-MDT with the aim to facilitate their fuel calculations!</p>
@@ -58,41 +98,6 @@
             <h2>Copyright: TED STAGGS 2022</h2>
         </div>
     </div>
-    <script defer>
-        function calculate() {
-                 var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
-                 var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
-                 var stick = document.getElementById("stick").value; // grap input STICKS desired
-                 var ferry = document.getElementById("ferry").value; // grap input FERRY desired
-                 var extra = document.getElementById("extra").value; // grap input extra desired
-                 var nfuelAR = parseInt(fuelAR);
-                 var nfuelAL = parseInt(fuelAL);
-                 var fuelA = nfuelAR + nfuelAL; // fuel available
-                 var onestick = 50; // Fuel required for 1 Stick
-                 var oneferry = 30; // Fuel required for 1 Ferry
-                 var nstick = parseInt(stick);
-                 var nferry = parseInt(ferry);
-                 var nextra = parseInt(extra);
-                 var stickD = nstick * 50; // Fuel for sticks desired
-                 var ferryD = nferry * 30; // Fuel for ferrys desired
-                 var minimum = 65; // Alternate + Reserve: 20L + 45L 
-                 var desired = stickD + ferryD + nextra + minimum; // desired fuel for start-up
-                 if (desired > 332) {
-
-                    alert("Check P.O.H. Fuel Limitations Section 2-9!");
-                }
-                 var required = desired - fuelA; // fuel required to be fuelled
-                 var desiredL = desired / 2;
-                 var desiredR = desired / 2;
-                 // fuel desired L equals R thus Fuel is balanced
-                 var requiredL = desiredL - fuelAL;
-                 console.log(requiredL);
-                 var requiredR = desiredR - fuelAR;
-                 console.log(requiredR);
-                 // Output this required R and Left 
-                 document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
-                 document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
-        }  
-    </script>
+    
 </body>
 </html>
