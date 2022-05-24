@@ -34,17 +34,54 @@
             <output>________</output>
         </form>     
         <h2>-----------------------------------------------------</h2>
-        <h3>ADD DISPATCH STYLE</h3>
+        <h3>NOTES:</h3>
+        <h4>Minimum Fuel = 65Litres (Reserve & Alternate)</h4>
+        <h2>-----------------------------------------------------</h2>
+        <h3>Development Goals to be implemented</h3>
+        <h4>- Too much fuel: add warning</h4>
+        <h4>- Add function export PDF --> Dispatch Style</h4>
     </div>
     <script type="text/javascript">
         function calculate() {
-                 var fuelAR = document.getElementById("fuelAR").value;
-                 var fuelAL = document.getElementById("fuelAL").value;
-                 var stick = document.getElementById("stick").value;
-                 var ferry = document.getElementById("ferry").value;
-                 var extra = document.getElementById("extra").value;
+                 var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
+
+                 var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
+
+                 var stick = document.getElementById("stick").value; // grap input STICKS desired
+
+                 var ferry = document.getElementById("ferry").value; // grap input FERRY desired
+
+                 var extra = document.getElementById("extra").value; // grap input extra desired
+
                  var fuelA = fuelAR + fuelAL; // fuel available
-                 alert(fuelA);
+ 
+                 var onestick = 50; // Fuel required for 1 Stick
+
+                 var oneferry = 30; // Fuel required for 1 Ferry
+
+                 var stickD = stick * 50; // Fuel for sticks desired
+
+                 var ferryD = ferry * 30; // Fuel for ferrys desired
+
+                 var minimum = 65; // Alternate + Reserve: 20L + 45L 
+
+                 var desired = stickD + ferryD + extra + minimum; // desired fuel for start-up
+
+                 var required = desired - fuelA; // fuel required to be fuelled
+
+                 // Let us calculate desired fuel to be tanked each tank
+
+                 var desiredL = desired / 2;
+
+                 var desiredR = desired / 2;
+
+                 // fuel desired L equals R thus Fuel is balanced
+
+                 var requiredL = desiredL - fuelAL;
+
+                 var requiredR = desired - fuelAR;
+
+                 // Output this 
         }  
     </script>
 </body>
