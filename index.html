@@ -48,79 +48,83 @@
         }  
     </script>
     <header>
-        <div class="head">
+        <div class="text-center">
             <h1>Calculate <span class="text-primary text-highlight-warning">FUEL</span> to be fuelled into each tank!</h1>
         </div>
-        <ul class="step step-md">
-            <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-primary">1</span>
-                  <div class="step-content">
-                    <h4 class="step-title">First step</h4>
-                    <p class="step-text">Enter fuel available in each tank <mark>LEFT</mark> or <mark>RIGHT</mark></p>
-                  </div>
-                </div>
-              </li>
-            
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-primary">2</span>
-                  <div class="step-content">
-                    <h4 class="step-title">Second step</h4>
-                    <p class="step-text">Enter number of <mark>STICKS</mark> desired (if none input 0), calculated on 50L / stick</p>
-                  </div>
-                </div>
-              </li>
-            
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-primary">3</span>
-                  <div class="step-content">
-                    <h4 class="step-title">Third step</h4>
-                    <p class="step-text">Enter number of <mark>FERRYS</mark> desired (if none input 0), calculated on 30L / ferry</p>
-                  </div>
-                </div>
-              </li>
-              <li class="step-item">
-                  <div class="step-content-wrapper">
-                    <span class="step-icon step-icon-soft-primary">4</span>
-                    <div class="step-content">
-                      <h4 class="step-title">Fourth step</h4>
-                      <p class="step-text">Enter <mark>EXTRA</mark> fuel required (if none input 0)</p>
+        <div class="instructions">
+            <ul class="step step-md">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                      <span class="step-icon step-icon-soft-primary">1</span>
+                      <div class="step-content">
+                        <h4 class="step-title">First step</h4>
+                        <p class="step-text">Enter fuel available in each tank <mark>LEFT</mark> or <mark>RIGHT</mark></p>
+                      </div>
                     </div>
-                  </div>
-              </li>
-        </ul>
+                  </li>
+                
+                  <li class="step-item">
+                    <div class="step-content-wrapper">
+                      <span class="step-icon step-icon-soft-primary">2</span>
+                      <div class="step-content">
+                        <h4 class="step-title">Second step</h4>
+                        <p class="step-text">Enter number of <mark>STICKS</mark> desired (if none input 0), calculated on 50L / stick</p>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="step-item">
+                    <div class="step-content-wrapper">
+                      <span class="step-icon step-icon-soft-primary">3</span>
+                      <div class="step-content">
+                        <h4 class="step-title">Third step</h4>
+                        <p class="step-text">Enter number of <mark>FERRYS</mark> desired (if none input 0), calculated on 30L / ferry</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="step-item">
+                      <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">4</span>
+                        <div class="step-content">
+                          <h4 class="step-title">Fourth step</h4>
+                          <p class="step-text">Enter <mark>EXTRA</mark> fuel required (if none input 0)</p>
+                        </div>
+                      </div>
+                  </li>
+            </ul>
+
+        </div>
+        
         <p><span class="text-dark fw-semi-bold">Note: </span><em>Calculations are based on a minimum fuel of 65L including a <mark>FINAL RESERVE</mark> & <mark>ALTERNATE</mark> fuel to LUX</em></p>
         <p><span class="text-dark fw-semi-bold">Note: </span><em>Unit given and input must be in <mark>litres</mark> & <mark>AVGAS100LL</mark>!</em></p>
         <p>This calculator serves only as a tool and a recalculation should be considered to make up your own mind</p>
         <hr>
     </header>
-    <div class="enterfuel">
+    <div class="fuelenter">
         <form>
             <div class="mb-4">
                 <label for="fuelAL" class="form-label">Enter Fuel Available <span class="badge bg-soft-primary text-primary">LEFT</span> Tank (litres)*</label>
                 <input type="number" name="fuelAL" class="js-input-mask form-control" id="fuelAL"> 
-             </div>
-             <div class="mb-4">
+            </div>
+            <div class="mb-4">
                 <label for="fuelAR" class="form-label">Enter Fuel Available <span class="badge bg-soft-primary text-primary">RIGHT</span> Tank (litres)*</label>
                 <input type="number" name="fuelAR" class="js-input-mask form-control" id="fuelAR"> 
-             </div>
-             <div class="mb-4">
+            </div>
+            <div class="mb-4">
                 <label for="stick" class="form-label">Enter <span class="badge bg-soft-primary text-primary">STICKS</span> desired*</label>
                 <input type="number" name="stick" class="js-input-mask form-control" id="stick"> 
-             </div>
-             <div class="mb-4">
+            </div>
+            <div class="mb-4">
                 <label for="ferry" class="form-label">Enter <span class="badge bg-soft-primary text-primary">FERRYS</span> desired*</label>
                 <input type="number" name="ferry" class="js-input-mask form-control" id="ferry"> 
-             </div>
-             <div class="mb-4">
+            </div>
+            <div class="mb-4">
                 <label for="extra" class="form-label">Enter <span class="badge bg-soft-primary text-primary">EXTRA</span> fuel desired (litres)*</label>
                 <input type="number" name="extra" class="js-input-mask form-control" id="extra"> 
-             </div>
-            <input type="button" onclick="calculate()" class="btn btn-primary" value="SUBMIT">
+            </div>
+            <div class="text-center"><input type="button" onclick="calculate()" class="btn btn-primary" value="SUBMIT"></div>
             <br>
-            <h2>To be Fuelled in each tank</h2>
+            <div class="text-center"><h2>To be Fuelled in each tank</h2></div>
             <p id="left"></p>
             <p id="right"></p>
         </form>
@@ -133,14 +137,13 @@
             <h4>- Field required message</h4>
         </div>
         <hr>
-        <div class="feedback">
+        <div class="text-center">
             <h3>You are welcome to submit FEEDBACK / IDEAS / IMRPOVEMENTS: <a href="mailto:ted@staggs.lu?subject=Feedback&body=Message">Send Feedback</a> (ted@staggs.lu) :-)</h3>
         </div>
         <hr>
-        <div class="credits">
+        <div class="text-center">
             <h2>Copyright: TED STAGGS 2022</h2>
         </div>
     </div>
-    
 </body>
 </html>
