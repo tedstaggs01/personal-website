@@ -31,7 +31,8 @@
             <h2>-----------------------------------------------------</h2>
             <br>
             <h2>OUTPUT LEFT & RIGHT</h2>
-            <output>________</output>
+            <p id="left"></p>
+            <p id="right"></p>
         </form>     
         <h2>-----------------------------------------------------</h2>
         <h3>NOTES:</h3>
@@ -98,6 +99,10 @@
                  console.log(requiredR);
 
                  // Output this required R and Left 
+
+                 document.getElementById("left").innerHTML = requiredL;
+
+                 document.getElementById("right").innerHTML = requiredR;
         }  
     </script>
 </body>
