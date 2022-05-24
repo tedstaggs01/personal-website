@@ -12,29 +12,23 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="enterfuel">
-        <h1>Enter Fuel available in each tank</h1>
-        <label for="fuelAR">Fuel RIGHT Tank</label>
-        <input type="number" name="fuelAR" id="fuelAR"><br><br>
-        <label for="fuelAL">Fuel LEFT Tank</label>
-        <input type="number" name="fuelAL" id="fuelAL"><br><br>
-        <button type="button"> number of STICKs + number of FERRIES</button>
-        <input type="button" onclick="calculate()" value="submit">     
-    </div>
-    <script>
-        function calculate(){
-            let fuelAR; // fuel available right (user input)
-            let fuelAL; // fuel available left (user input)
-            function getVal(){
-                return fuelAR = document.getElementById("fuelAR").value;
-            } 
-            function getVal(){
-                return fuelAL = document.getElementById("fuelAL").value;
-            }
-
-            let fuelA = fuelAR + fuelAL; // fuel available 
-            alert(fuelA);
-        }
+    <script type="text/javascript">
+        function calculate() {
+                 var fuelAR = document.getElementById("fuelAR").value;
+                 var fuelAL = document.getElementById("fuelAL").value;
+                 var fuelA = fuelAR + fuelAL; // fuel available
+                 alert(fuelAR + fuelAL);
+        } 
     </script>
+    <div class="enterfuel">
+        <form>
+            <h1>Enter Fuel available in each tank</h1>
+            <label for="fuelAR">Fuel RIGHT Tank</label>
+            <input type="number" name="fuelAR" id="fuelAR"><br><br>
+            <label for="fuelAR">Fuel LEFT Tank</label>
+            <input type="number" name="fuelAL" id="fuelAL"><br><br>
+            <input type="button" onclick="calculate()" value="submit">
+        </form>     
+    </div>
 </body>
 </html>
