@@ -21,20 +21,20 @@
             <p>Note: Unit given and input must be in litres & AVGAS100LL!</p>
             <p>This calculator serves only as a tool and a recalculation should be considered to make up your own mind</p>
             <hr>
-            
+
         </div>
     </header>
     <div class="enterfuel">
         <form>
-            <label for="fuelAR">Fuel Available RIGHT Tank (litres)</label>
+            <label for="fuelAR">Fuel Available RIGHT Tank (litres)*</label>
             <input type="number" name="fuelAR" id="fuelAR"><br><br>
-            <label for="fuelAR">Fuel Available LEFT Tank (litres)</label>
+            <label for="fuelAR">Fuel Available LEFT Tank (litres)*</label>
             <input type="number" name="fuelAL" id="fuelAL"><br><br>
-            <label for="">Enter Stick(s) desired</label>
+            <label for="">Enter Stick(s) desired*</label>
             <input type="number" name="stick" id="stick"><br><br>
-            <label for="">Enter Ferry(s) desired</label>
+            <label for="">Enter Ferry(s) desired*</label>
             <input type="number" name="ferry" id="ferry"><br><br>
-            <label for="">Enter EXTRA fuel desired (litres)</label>
+            <label for="">Enter EXTRA fuel desired (litres)*</label>
             <input type="number" name="extra" id="extra"><br><br>
             <input type="button" onclick="calculate()" value="submit">
             <br>
@@ -42,15 +42,19 @@
             <p id="left"></p>
             <p id="right"></p>
         </form>
+        <hr>
         <div class="changelog">
             <h3>Development Goals to be implemented</h3>
             <h4>- Add function export PDF --> Dispatch Style</h4>
             <h4>- Add Disclaimer</h4>
             <h4>- Make everything look stylish ;)</h4>
+            <h4>- Field required message</h4>
         </div>
+        <hr>
         <div class="feedback">
             <h2>You are welcome to submit FEEDBACK / IDEAS / IMRPOVEMENTS: <a href="mailto:ted@staggs.lu?subject=Feedback&body=Message">Send Feedback</a> (ted@staggs.lu) :-)</h2>
         </div>
+        <hr>
         <div class="credits">
             <h2>Copyright: TED STAGGS 2022</h2>
         </div>
