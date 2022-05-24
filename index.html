@@ -40,8 +40,9 @@
         <h3>Development Goals to be implemented</h3>
         <h4>- Too much fuel: add warning</h4>
         <h4>- Add function export PDF --> Dispatch Style</h4>
+        <h4>- Add Disclaimer</h4>
     </div>
-    <script type="text/javascript">
+    <script>
         function calculate() {
                  var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
 
@@ -53,19 +54,27 @@
 
                  var extra = document.getElementById("extra").value; // grap input extra desired
 
-                 var fuelA = fuelAR + fuelAL; // fuel available
+                 var nfuelAR = parseInt(fuelAR);
+
+                 var nfuelAL = parseInt(fuelAL);
+
+                 var fuelA = nfuelAR + nfuelAL; // fuel available
  
                  var onestick = 50; // Fuel required for 1 Stick
 
                  var oneferry = 30; // Fuel required for 1 Ferry
 
-                 var stickD = stick * 50; // Fuel for sticks desired
+                 var nstick = parseInt(stick);
+                 var nferry = parseInt(ferry);
+                 var nextra = parseInt(extra);
 
-                 var ferryD = ferry * 30; // Fuel for ferrys desired
+                 var stickD = nstick * 50; // Fuel for sticks desired
+
+                 var ferryD = nferry * 30; // Fuel for ferrys desired
 
                  var minimum = 65; // Alternate + Reserve: 20L + 45L 
 
-                 var desired = stickD + ferryD + extra + minimum; // desired fuel for start-up
+                 var desired = stickD + ferryD + nextra + minimum; // desired fuel for start-up
 
                  if (desired > 332) {
 
@@ -73,8 +82,6 @@
                 }
 
                  var required = desired - fuelA; // fuel required to be fuelled
-
-                 // Let us calculate desired fuel to be tanked each tank
 
                  var desiredL = desired / 2;
 
@@ -84,9 +91,13 @@
 
                  var requiredL = desiredL - fuelAL;
 
+                 console.log(requiredL);
+
                  var requiredR = desiredR - fuelAR;
 
-                 // Output this required R and Left
+                 console.log(requiredR);
+
+                 // Output this required R and Left 
         }  
     </script>
 </body>
