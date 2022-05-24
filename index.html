@@ -65,16 +65,26 @@
     </header>
     <div class="enterfuel">
         <form>
-            <label for="fuelAR">Fuel Available LEFT Tank (litres)*</label>
-            <input type="number" name="fuelAL" id="fuelAL"><br><br>
-            <label for="fuelAR">Fuel Available RIGHT Tank (litres)*</label>
-            <input type="number" name="fuelAR" id="fuelAR"><br><br>
-            <label for="">Enter Stick(s) desired*</label>
-            <input type="number" name="stick" id="stick"><br><br>
-            <label for="">Enter Ferry(s) desired*</label>
-            <input type="number" name="ferry" id="ferry"><br><br>
-            <label for="">Enter EXTRA fuel desired (litres)*</label>
-            <input type="number" name="extra" id="extra"><br><br>
+            <div class="mb-4">
+                <label for="fuelAL" class="form-label">Fuel Available LEFT Tank (litres)*</label>
+                <input type="number" name="fuelAL" class="js-input-mask form-control" id="fuelAL"> 
+             </div>
+             <div class="mb-4">
+                <label for="fuelAR" class="form-label">Fuel Available RIGHT Tank (litres)**</label>
+                <input type="number" name="fuelAR" class="js-input-mask form-control" id="fuelAR"> 
+             </div>
+             <div class="mb-4">
+                <label for="stick" class="form-label">Enter Stick(s) desired*</label>
+                <input type="number" name="stick" class="js-input-mask form-control" id="stick"> 
+             </div>
+             <div class="mb-4">
+                <label for="ferry" class="form-label">Enter Ferry(s) desired*</label>
+                <input type="number" name="ferry" class="js-input-mask form-control" id="ferry"> 
+             </div>
+             <div class="mb-4">
+                <label for="extra" class="form-label">Enter EXTRA fuel desired (litres)*</label>
+                <input type="number" name="extra" class="js-input-mask form-control" id="extra"> 
+             </div>
             <input type="button" onclick="calculate()" class="btn btn-primary" value="SUBMIT">
             <br>
             <h2>To be Fuelled in each tank</h2>
