@@ -13,14 +13,18 @@
 </head>
 <body>
     <header>
-        <h1>Calculate Fuel to be fuelled into each tank!</h1>
-        <p>1. Enter fuel available in each tank LEFT or RIGHT</p>
-        <p>2. Enter number of sticks desired (if none input 0), calculated on 50L / stick</p>
-        <p>3. Enter number of ferrys desired (if none input 0), calculated on 30L / ferry</p>
-        <p>4. Enter Extra fuel required (if none input 0)</p>
-        <p>Note: Calculations are based on a minimum fuel of 65L including a final reserve and alternate fuel to LUX</p>
-        <p>Note: Unit given and input must be in litres!</p>
-        <p>This calculator serves only as a tool and a recalculatiion should be considered to make up your own mind</p>
+        <div class="head">
+            <h1>Calculate Fuel to be fuelled into each tank!</h1>
+        </div>
+        <div class="instructions">
+            <p>1. Enter fuel available in each tank LEFT or RIGHT</p>
+            <p>2. Enter number of sticks desired (if none input 0), calculated on 50L / stick</p>
+            <p>3. Enter number of ferrys desired (if none input 0), calculated on 30L / ferry</p>
+            <p>4. Enter Extra fuel required (if none input 0)</p>
+            <p>Note: Calculations are based on a minimum fuel of 65L including a final reserve and alternate fuel to LUX</p>
+            <p>Note: Unit given and input must be in litres!</p>
+            <p>This calculator serves only as a tool and a recalculatiion should be considered to make up your own mind</p>
+        </div>
     </header>
     <div class="enterfuel">
         <form>
@@ -36,21 +40,18 @@
             <input type="number" name="extra" id="extra"><br><br>
             <input type="button" onclick="calculate()" value="submit">
             <br>
-            <br>
-            <h2>-----------------------------------------------------</h2>
-            <br>
             <h2>OUTPUT LEFT & RIGHT</h2>
             <p id="left"></p>
             <p id="right"></p>
-        </form>     
-        <h2>-----------------------------------------------------</h2>
-        <h3>NOTES:</h3>
-        <h4>Minimum Fuel = 65Litres (Reserve & Alternate)</h4>
-        <h2>-----------------------------------------------------</h2>
-        <h3>Development Goals to be implemented</h3>
-        <h4>- Too much fuel: add warning</h4>
-        <h4>- Add function export PDF --> Dispatch Style</h4>
-        <h4>- Add Disclaimer</h4>
+        </form>
+        <div class="changelog">
+            <h3>Development Goals to be implemented</h3>
+            <h4>- Add function export PDF --> Dispatch Style</h4>
+            <h4>- Add Disclaimer</h4>
+        </div>
+        <div class="credits">
+            <h2>Copyright: TED STAGGS</h2>
+        </div>
     </div>
     <script>
         function calculate() {
