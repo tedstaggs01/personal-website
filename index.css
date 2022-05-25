@@ -1,4 +1,5 @@
-<div class="mb-4">
-   <label for="" class="form-label"></label>
-   <input type="number" class="js-input-mask form-control" id=""> 
-</div>
+body {
+   margin-left: 25px;
+   margin-right: 25px;
+ }
+ 
