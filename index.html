@@ -36,10 +36,6 @@
                  var ferryD = nferry * 30; // Fuel for ferrys desired
                  var minimum = 65; // Alternate + Reserve: 20L + 45L 
                  var desired = stickD + ferryD + nextra + minimum; // desired fuel for start-up
-                 if (desired > 332) {
-
-                    alert("Check P.O.H. Fuel Limitations Section 2-9!");
-                }
                  var required = desired - fuelA; // fuel required to be fuelled
                  var perR = undefined;
                  var perL = undefined;
@@ -47,13 +43,28 @@
                  var desiredR = desired / 2;
                  // fuel desired L equals R thus Fuel is balanced
                  var requiredL = desiredL - fuelAL;
-                 console.log(requiredL);
                  var requiredR = desiredR - fuelAR;
-                 console.log(requiredR);
                  // Output this required R and Left 
                  document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
                  document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
-        }  
+                 if (desired > 332) {
+                    alert("Check P.O.H. Fuel Limitations Section 2-9!");
+                 }
+                 if (nstick > 4) {
+                    alert("Check Take - off Performance!");
+                 }
+                 if (desired < 65) {
+                  alert("Fuel Reserve ONLY! Check fuel desired!");
+                 }
+                 if (nferry > 2) {
+                  alert("Are more than 2 ferrys required?");
+                 }
+                 if (requiredL > 170) {
+                  alert("Check P.O.H. Fuel Limitations Section 2-9!");
+                 }
+                 if (requiredR > 170) {
+                  alert("Check P.O.H. Fuel Limitations Section 2-9!");
+                 }         
     </script>
     <header>
       <div class="instructions">
