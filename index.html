@@ -87,16 +87,20 @@
           // We only requested one METAR
           // If you request more than one, the data array would need to be in a loop
           var metar = response.data[0];
+          var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
+          var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
     
           document.getElementById('icao').innerText = metar.icao;
           document.getElementById('name').innerText = metar.station.name;
           document.getElementById('raw').innerText = metar.raw_text;
           document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
-          document.getElementById('pa').innerText = metar.barometer.mb;
+          document.getElementById('pa').innerText = pressureALT;
+          document.getElementById('da').innerText = densityALT;
         } else {
           document.getElementById('raw').innerText = 'No results returned from API';
         }
       }
+      
     </script>
     <header>
       <div class="text-center">
