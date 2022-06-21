@@ -94,8 +94,8 @@
           document.getElementById('name').innerText = metar.station.name;
           document.getElementById('raw').innerText = metar.raw_text;
           document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
-          document.getElementById('pa').innerText = pressureALT;
-          document.getElementById('da').innerText = densityALT;
+          document.getElementById('pa').innerText = pressureALT + "ft";
+          document.getElementById('da').innerText = densityALT +"ft";
         } else {
           document.getElementById('raw').innerText = 'No results returned from API';
         }
