@@ -70,18 +70,52 @@
                  }         
      }
     </script>
+    <script defer>
+      var xhr = new XMLHttpRequest();
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          success(JSON.parse(this.responseText));
+        }
+      });
+    
+      xhr.open("GET", "https://api.checkwx.com/metar/ELLX/decoded");
+      xhr.setRequestHeader("X-API-KEY", "0fb79b0d7a774dc59771b106a2");
+      xhr.send();
+    
+      function success(response) {
+        if (response.results > 0) {
+          // We only requested one METAR
+          // If you request more than one, the data array would need to be in a loop
+          var metar = response.data[0];
+    
+          document.getElementById('icao').innerText = metar.icao;
+          document.getElementById('name').innerText = metar.station.name;
+          document.getElementById('raw').innerText = metar.raw_text;
+        } else {
+          document.getElementById('raw').innerText = 'No results returned from API';
+        }
+      }
+    </script>
     <header>
       <div class="text-center">
          <h1>NOERTRANGE (ELNT) PILOT TOOLS</h1>
       </div>
       <hr>
-      <h2>Weather (function to be implemented)</h2>
+      <div class="container mt-5">
+        <h2>METAR</h2>
+        <h4><span id="icao"></span> <span id="name"></span></h4>
+        <hr>
+        <pre id="raw"></pre>
+        <hr>
+      </div>
        <!--ELLX ... API implementation-->
        <!-- Density Altitude & Pressure ALtitude-->
       <hr>
       <h2>PIREPS (function to be implemented)</h2>
+      <!--Pilots can add notes to warn pilots from airfield conditions etc.-->
       <hr>
       <h2>Airspace Restrictions (function to be implemented)</h2>
+      <!--API - NOTAMS filter for LUX-->
       <hr>
       <div class="instructions">
         <div class="text-center">
@@ -98,7 +132,6 @@
                     </div>
                   </div>
                 </li>
-              
                 <li class="step-item">
                   <div class="step-content-wrapper">
                     <span class="step-icon step-icon-soft-primary">2</span>
@@ -108,7 +141,6 @@
                     </div>
                   </div>
                 </li>
-              
                 <li class="step-item">
                   <div class="step-content-wrapper">
                     <span class="step-icon step-icon-soft-primary">3</span>
