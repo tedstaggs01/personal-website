@@ -6,7 +6,33 @@
     <title>WX Briefing</title>
 </head>
 <body>
-    <h1>Function to be implemented. Please Standby :-)</h1>
-    <a href="https://www.prevision-meteo.ch/meteo/localite/bouy-luxembourg"><img src="https://www.prevision-meteo.ch/uploads/widget/bouy-luxembourg_0.png" width="650" height="250" /></a>
+    <h1>Function to be implemented. Please Standby :-) EXPERIMENTAL VERSION ONLY!</h1>
+
+    <div class="tile">
+        <fieldset class="thin">
+            <legend>Forecast - Significant Weather</legend>
+            <a href="http://www.wetterzentrale.de/de/topkarten.php?map=3&amp;model=ico&amp;var=46&amp;tr=1" target="_blank">
+                <img id="sigwx-img" src="http://www.wetterzentrale.de/maps/ICOOPME12_1_46.png" class="thin">
+            </a>
+            <div class="controls">
+                <img id="sigwx-first" src="img/first.png" class="controls opaque" onclick="sigwx_first();" alt="First">
+                <img id="sigwx-prev" src="img/prev.png" class="controls opaque" onclick="sigwx_prev();" alt="Previous">
+                <img id="sigwx-playpause" src="img/playpause.png" class="controls" onclick="sigwx_playpause();" alt="Play/Pause">
+                <img id="sigwx-next" src="img/next.png" class="controls" onclick="sigwx_next();" alt="Next">
+                <img id="sigwx-last" src="img/last.png" class="controls" onclick="sigwx_last();" alt="Last">
+                <select name="DropDownList1" id="DropDownList1" class="controls" onchange="sigwx(); gusts();">
+
+                </select>
+            </div>
+            <div class="tile">
+                <fieldset class="standard">
+                    <legend>Lightning Radar Europe</legend>
+                    <a href="http://de.blitzortung.org/live_lightning_maps.php?map=10" target="_blank">
+                        <img src="http://images.blitzortung.org/Images/image_b_eu.png?t=20226231841" class="standard">
+                    </a>
+                </fieldset>
+            </div>
+        </fieldset>
+    </div>
 </body>
 </html>
