@@ -7,3 +7,12 @@ function getutc() {
 
 getutc();
 
+function getlmt(){
+    const lmt = new Date();
+    console.log(lmt.getHours());
+    console.log(lmt.getMinutes());
+    document.getElementById("lmt").innerHTML = lmt.getHours() + ":" + lmt.getMinutes();
+}
+
+getlmt();
+
