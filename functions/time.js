@@ -4,3 +4,6 @@ function getutc() {
     console.log(date.getUTCMinutes());
     document.getElementById("utc").innerHTML = date.getUTCHours() + ":"+  date.getUTCMinutes();
 }
+
+getutc();
+
