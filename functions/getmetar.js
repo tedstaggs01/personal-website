@@ -28,19 +28,3 @@ function success(response) {
       document.getElementById('raw').innerText = 'No results returned from API';
     }
 }
-
-    // VFR 
-    // metar: ceiling = >> 1500ft
-    // metar: visibility = >> 5km
-
-    // SVFR
-    // metar: ceiling = >> 600ft - 1500ft
-    // metar: Visibility = 1.5km
-
-    //IFR 
-    // metar: ceiling <<600ft
-    // metar: visibility = <1.5km
-
-    //LIFR
-    //metar: ceiling <<200ft
-    //metar: visibility = <RVR 550
