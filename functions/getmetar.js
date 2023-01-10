@@ -17,6 +17,7 @@ function success(response) {
       var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
       var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
 
+      document.getElementById('quicklabel').innerText = metar.flight_category;
       document.getElementById('icao').innerText = metar.icao;
       document.getElementById('name').innerText = metar.station.name;
       document.getElementById('raw').innerText = metar.raw_text;
@@ -28,7 +29,6 @@ function success(response) {
     }
 }
 
-function quicklabel(){
     // VFR 
     // metar: ceiling = >> 1500ft
     // metar: visibility = >> 5km
@@ -44,4 +44,3 @@ function quicklabel(){
     //LIFR
     //metar: ceiling <<200ft
     //metar: visibility = <RVR 550
-}
