@@ -1,29 +1,47 @@
 var xhr = new XMLHttpRequest();
-      xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-          success(JSON.parse(this.responseText));
-        }
-      });
-    
-      xhr.open("GET", "https://api.checkwx.com/metar/ELLX/decoded");
-      xhr.setRequestHeader("X-API-KEY", "0fb79b0d7a774dc59771b106a2");
-      xhr.send();
-    
-      function success(response) {
-        if (response.results > 0) {
-          // We only requested one METAR
-          // If you request more than one, the data array would need to be in a loop
-          var metar = response.data[0];
-          var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
-          var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
-    
-          document.getElementById('icao').innerText = metar.icao;
-          document.getElementById('name').innerText = metar.station.name;
-          document.getElementById('raw').innerText = metar.raw_text;
-          document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
-          document.getElementById('pa').innerText = pressureALT + "ft";
-          document.getElementById('da').innerText = densityALT +"ft";
-        } else {
-          document.getElementById('raw').innerText = 'No results returned from API';
-        }
-      }
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    success(JSON.parse(this.responseText));
+  }
+});
+
+xhr.open("GET", "https://api.checkwx.com/metar/ELLX/decoded");
+xhr.setRequestHeader("X-API-KEY", "0fb79b0d7a774dc59771b106a2");
+xhr.send();
+
+function success(response) {
+  if (response.results > 0) {
+      // We only requested one METAR
+      // If you request more than one, the data array would need to be in a loop
+      var metar = response.data[0];
+      var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
+      var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
+
+      document.getElementById('icao').innerText = metar.icao;
+      document.getElementById('name').innerText = metar.station.name;
+      document.getElementById('raw').innerText = metar.raw_text;
+      document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
+      document.getElementById('pa').innerText = pressureALT + "ft";
+      document.getElementById('da').innerText = densityALT +"ft";
+    } else {
+      document.getElementById('raw').innerText = 'No results returned from API';
+    }
+}
+
+function quicklabel(){
+    // VFR 
+    // metar: ceiling = >> 1500ft
+    // metar: visibility = >> 5km
+
+    // SVFR
+    // metar: ceiling = >> 600ft - 1500ft
+    // metar: Visibility = 1.5km
+
+    //IFR 
+    // metar: ceiling <<600ft
+    // metar: visibility = <1.5km
+
+    //LIFR
+    //metar: ceiling <<200ft
+    //metar: visibility = <RVR 550
+}
