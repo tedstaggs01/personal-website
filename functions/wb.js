@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 // Profil
 
  /*const lxaib = {
