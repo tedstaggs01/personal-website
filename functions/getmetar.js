@@ -16,8 +16,19 @@ function success(response) {
       var metar = response.data[0];
       var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
       var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
-
+      var quicklabel = metar.flight_category;
+      
       document.getElementById('quicklabel').innerText = metar.flight_category;
+      if quicklabel = vfr {
+        document.getElementById("myDiv").style.background = "#04AA6D";
+      } if quicklabel = mfr {
+        document.getElementById("myDiv").style.background = "#2196F3";
+      } if quicklabel = ifr {
+        document.getElementById("myDiv").style.background = "#f44336";
+      } if quicklabel = lifr {
+        document.getElementById("myDiv").style.background = "#b300b3";
+      }
+
       document.getElementById('icao').innerText = metar.icao;
       document.getElementById('name').innerText = metar.station.name;
       document.getElementById('raw').innerText = metar.raw_text;
