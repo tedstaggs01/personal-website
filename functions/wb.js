@@ -80,10 +80,5 @@ function calculatewb(){
 
 calculatewb();
 
-
-
 // these values will be transferred into a graph
 // pdf output upon button 
-
-
-
