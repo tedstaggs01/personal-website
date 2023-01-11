@@ -11,8 +11,6 @@ xhr.send();
 
 function success(response) {
   if (response.results > 0) {
-      // We only requested one METAR
-      // If you request more than one, the data array would need to be in a loop
       var metar = response.data[0];
       var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
       var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
