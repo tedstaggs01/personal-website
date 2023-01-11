@@ -1,16 +1,4 @@
 
-// Profil
-
- /*const lxaib = {
-    type: "PA28A" , 
-    emptyweightW: 647 ,
-    emptyweightA: 2.112 ,
-    crewA: 2.05 ,
-    paxA: 2.993 ,
-    baggageA: 3.627 ,
-    fuelA: 2,413
-}; */
-
 // empty weight
 
 var emptyweightW;
@@ -83,6 +71,16 @@ var takeoffA = takeoffM / takeoffW;
 var takeoffL;
 var landingA = landingM / landingW;
 var landingL;
+
+function calculatewb(){
+    document.getElementById("zerofuelW").innerHTML = zerofuelW ;
+    document.getElementById("rampW").innerHTML = rampW;
+    document.getElementById("toW").innerHTML = takeoffW;
+    document.getElementById("ldgW").innerHTML = landingW;
+}
+
+calculatewb();
+
 
 
 // these values will be transferred into a graph
