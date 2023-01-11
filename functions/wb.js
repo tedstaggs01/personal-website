@@ -1,4 +1,19 @@
 
+// Add Airplane profiles
+
+var lxmdt = {
+    type: "Airvan",
+    model: "GA8",
+    emptyweight: 1051,
+    emptyweightarm: 1912,
+    crewarm: 965,
+    paxarm: 1514,
+    baggagearm: 1514,
+    fuelarm: 1715,
+    fuelcapacity: "xyz"
+}
+
+
 
 function wbcalculate(){
     
