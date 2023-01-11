@@ -13,8 +13,6 @@ var lxmdt = {
     fuelcapacity: "xyz"
 };
 
-
-
 function wbcalculate(){
     
     // Weights
