@@ -11,7 +11,7 @@ var lxmdt = {
     baggagearm: 1514,
     fuelarm: 1715,
     fuelcapacity: "xyz"
-}
+};
 
 
 
