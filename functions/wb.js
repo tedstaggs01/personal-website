@@ -1,5 +1,7 @@
 
-// empty weight
+
+function calculatewb(){
+              // empty weight
 var emptyweightW = document.getElementById("emptyweightW").innerHTML;
 var emptyweightA = 1912;
 var emptyweightM = emptyweightW * emptyweightA;
@@ -50,14 +52,12 @@ var rampM = rampA * rampW;
 var takeoffM = takeoffW * takeoffA;
 var landingM = landingA * landingW;
 
-// Centre of gravities
+    // Centre of gravities
 
-var zerofuelA = zerofuelM / zerofuelW;
-var rampA = rampM / rampW;
-var takeoffA = takeoffM / takeoffW;
-var landingA = landingM / landingW;
-
-function calculatewb(){
+    var zerof 
+    var rampA = rampM / rampW;
+    var takeoffA = takeoffM / takeoffW;
+    var landingA = landingM / landingW;
     document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg";
     document.getElementById("rampW").innerHTML = rampW + " kg";
     document.getElementById("toW").innerHTML = takeoffW + " kg";
