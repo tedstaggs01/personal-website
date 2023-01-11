@@ -67,7 +67,7 @@ function wbcalculate(){
     var takeoffM = takeoffW * takeoffA;
     var landingM = landingA * landingW;
     
-        // Centre of gravities
+    // Centre of gravities
     
     var zerof 
     var rampA = rampM / rampW;
