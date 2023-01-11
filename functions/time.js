@@ -16,3 +16,11 @@ function getlmt(){
 
 getlmt();
 
+function getyear(){
+    const copyr = new Date();
+    console.log(copyr.getFullYear());
+    document.getElementById("copyright").innerHTML = copyr.getFullYear();
+}
+
+getyear();
+
