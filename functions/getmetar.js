@@ -12,8 +12,6 @@ xhr.send();
 function success(response) {
   if (response.results > 0) {
       var metar = response.data[0];
-      var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
-      var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
       function quicklabel(){
         document.getElementById('quicklabel').innerText = metar.flight_category;
         var quickla = metar.flight_category;
@@ -29,12 +27,17 @@ function success(response) {
       }
       quicklabel();
 
+      var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
+      var palt = parseInt(pressureALT);
+      var densityALT = pressureALT + 118.8 * (metar.temperature.celsius - 12,5);
+      var dalt = parseInt(densityALT);
+
       document.getElementById('icao').innerText = metar.icao;
       document.getElementById('name').innerText = metar.station.name;
       document.getElementById('raw').innerText = metar.raw_text;
       document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
-      document.getElementById('pa').innerText = pressureALT + "ft";
-      document.getElementById('da').innerText = densityALT +"ft";
+      document.getElementById('pa').innerText = palt + "ft";
+      document.getElementById('da').innerText = dalt +"ft";
     } else {
       document.getElementById('raw').innerText = 'No results returned from API';
     }
