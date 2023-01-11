@@ -1,57 +1,47 @@
 
 // empty weight
 var emptyweightW = document.getElementById("emptyweightW").innerHTML;
-var emptyweightA = ;
+var emptyweightA = 1912;
 var emptyweightM = emptyweightW * emptyweightA;
 
 // Station cockpit
 
 var crewW = document.getElementById("crewW").innerHTML;
-var crewA = ;
+var crewA = 965;
 var crewM = crewW * crewA;
-var crewL;
 
 // Station PAX
 
 var paxW = document.getElementById("paxW").innerHTML;
-var paxA;
+var paxA = 1514;
 var paxmom = paxW * paxA;
-var paxL;
 
 // Station Baggage
 
 var baggageW = document.getElementById("baggageW").innerHTML;
-var baggageA;
+var baggageA = 1514;
 var baggageM = baggageW * baggageA;
-var baggageL;
 
 // Station Fuel
 
 var fuelW = document.getElementById("fuelW").innerHTML;
-var fuelA;
+var fuelA = 1715;
 var fuelM = fuelW * fuelA;
-var fuelL;
 
 // startup; taxi; runup fuel
 
 var taxiW = document.getElementById("taxiW").innerHTML;
-var taxiL;
 
 // Trip Fuel
 
 var tripW = document.getElementById("tripW").innerHTML; 
-var tripL;
 
 // weights
 
-var zerofuelW = emptyweightW + crewW + paxW + baggageW;
-var zerofuelL;
+var zerofuelW = emptyweightW + crewW + paxW + baggageW;;
 var rampW = zerofuelW + fuelW;
-var rampL;
 var takeoffW = rampW - taxiW;
-var takeoffL;
 var landingW = takeoffW - tripW;
-var landingL;
 
 // moments
 
@@ -63,13 +53,9 @@ var landingM = landingA * landingW;
 // Centre of gravities
 
 var zerofuelA = zerofuelM / zerofuelW;
-var zerofuelL;
 var rampA = rampM / rampW;
-var rampL;
 var takeoffA = takeoffM / takeoffW;
-var takeoffL;
 var landingA = landingM / landingW;
-var landingL;
 
 function calculatewb(){
     document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg";
