@@ -1,14 +1,13 @@
 
 // empty weight
-
-var emptyweightW;
-var emptyweightA;
+var emptyweightW = document.getElementById("emptyweightW").innerHTML;
+var emptyweightA = ;
 var emptyweightM = emptyweightW * emptyweightA;
 
 // Station cockpit
 
 var crewW = document.getElementById("crewW").innerHTML;
-var crewA;
+var crewA = ;
 var crewM = crewW * crewA;
 var crewL;
 
@@ -73,10 +72,10 @@ var landingA = landingM / landingW;
 var landingL;
 
 function calculatewb(){
-    document.getElementById("zerofuelW").innerHTML = zerofuelW ;
-    document.getElementById("rampW").innerHTML = rampW;
-    document.getElementById("toW").innerHTML = takeoffW;
-    document.getElementById("ldgW").innerHTML = landingW;
+    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg";
+    document.getElementById("rampW").innerHTML = rampW + " kg";
+    document.getElementById("toW").innerHTML = takeoffW + " kg";
+    document.getElementById("ldgW").innerHTML = landingW + " kg";
 }
 
 calculatewb();
