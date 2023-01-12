@@ -15,9 +15,9 @@ var lxmdt = {
 
 function wbcalculate(){
     
-    // Weights
+    // BEM
     
-    var emptyweightW = document.getElementById("emptyweightW").innerHTML;
+    var emptyweightW = 1051;
     var emptyweightA = 1912;
     var emptyweightM = emptyweightW * emptyweightA;
     
@@ -31,48 +31,54 @@ function wbcalculate(){
     
     var paxW = document.getElementById("paxW").innerHTML;
     var paxA = 1514;
-    var paxmom = paxW * paxA;
+    var paxM = paxW * paxA;
     
     // Station Baggage
     
     var baggageW = document.getElementById("baggageW").innerHTML;
     var baggageA = 1514;
     var baggageM = baggageW * baggageA;
+
+    // Zero Fuel
+
+    var zerofuelW = emptyweightW + crewW + paxW + baggageW;
+    var zerofuelM = emptyweightM + crewM + paxM + baggageM;
+    var zerofuelA = zerofuelM / zerofuelW;
     
     // Station Fuel
     
     var fuelW = document.getElementById("fuelW").innerHTML;
     var fuelA = 1715;
     var fuelM = fuelW * fuelA;
+
+    // Ramp
+
+    var rampW = zerofuelW + fuelW;
+    var rampM = zerofuelM + fuelM;
+    var rampA = zerofuelM / zerofuelW;
     
     // startup; taxi; runup fuel
     
     var taxiW = document.getElementById("taxiW").innerHTML;
+    var taxiM = fuelA * taxiW;
+
+    // Takeoff W
+
+    var takeoffW = rampW - taxiW;
+    var takeoffM = rampM - taxiM;
+    var takeoffA = takeoffM / takeoffW;
     
     // Trip Fuel
     
     var tripW = document.getElementById("tripW").innerHTML; 
-    
-    // weights
-    
-    var zerofuelW = emptyweightW + crewW + paxW + baggageW;;
-    var rampW = zerofuelW + fuelW;
-    var takeoffW = rampW - taxiW;
+    var tripM = tripW * fuelA;
+
+    // Landing Weight
+
     var landingW = takeoffW - tripW;
-    
-    // moments
-    
-    var zerofuelM = zerofuelA * zerofuelW;
-    var rampM = rampA * rampW;
-    var takeoffM = takeoffW * takeoffA;
-    var landingM = landingA * landingW;
-    
-    // Centre of gravities
-    
-    var zerof 
-    var rampA = rampM / rampW;
-    var takeoffA = takeoffM / takeoffW;
+    var landingM = takeoffM - tripM;
     var landingA = landingM / landingW;
+   
     document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg";
     document.getElementById("rampW").innerHTML = rampW + " kg";
     document.getElementById("toW").innerHTML = takeoffW + " kg";
