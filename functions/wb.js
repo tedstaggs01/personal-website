@@ -93,7 +93,5 @@ function wbcalculate(){
     document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
 }
 
-wbcalculate();
-
 // these values will be transferred into a graph
 // pdf output upon button 
