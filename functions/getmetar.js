@@ -12,20 +12,6 @@ xhr.send();
 function success(response) {
   if (response.results > 0) {
       var metar = response.data[0];
-      function quicklabel(){
-        document.getElementById('quicklabel').innerText = metar.flight_category;
-        var quickla = metar.flight_category;
-        if (quickla = "VFR") {
-          document.getElementById("quicklabel").style.background = "#04AA6D";
-        } if (quickla = "MVFR"){
-          document.getElementById("quicklabel").style.background = "#2196F3";
-        } if (quickla = "IFR") {
-          document.getElementById("quicklabel").style.background = "#f44336";
-        } if (quickla = "LIFR") {
-          document.getElementById("quicklabel").style.background = "#b300b3";
-        }
-      }
-      quicklabel();
 
       var pressureALT = (1013 - metar.barometer.mb)*27 + 1234;
       var palt = parseInt(pressureALT);
@@ -38,7 +24,23 @@ function success(response) {
       document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
       document.getElementById('pa').innerText = palt + "ft";
       document.getElementById('da').innerText = dalt +"ft";
+
     } else {
       document.getElementById('raw').innerText = 'No results returned from API';
     }
 }
+
+function quicklabel(){
+  document.getElementById('quicklabel').innerText = metar.flight_category;
+  var quickla = metar.flight_category;
+  if (quickla = "VFR") {
+    document.getElementById("quicklabel").style.background = "#04AA6D";
+  } if (quickla = "MVFR"){
+    document.getElementById("quicklabel").style.background = "#2196F3";
+  } if (quickla = "IFR") {
+    document.getElementById("quicklabel").style.background = "#f44336";
+  } if (quickla = "LIFR") {
+    document.getElementById("quicklabel").style.background = "#b300b3";
+  }
+}
+quicklabel();
