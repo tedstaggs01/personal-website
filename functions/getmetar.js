@@ -23,7 +23,7 @@ function success(response) {
       document.getElementById('raw').innerText = metar.raw_text;
       document.getElementById("frz").innerText = (metar.temperature.celsius/2)*1000 + 1234 + "ft";
       document.getElementById('pa').innerText = palt + "ft";
-      document.getElementById('da').innerText = dalt +"ft";
+      document.getElementById('da').innerText = dalt + "ft";
 
     } else {
       document.getElementById('raw').innerText = 'No results returned from API';
