@@ -23,19 +23,19 @@ function wbcalculate(){
     
     // Station cockpit
     
-    var crewW = document.getElementById("crewW").innerHTML;
+    var crewW = document.getElementById("crewW").value;
     var crewA = 965;
     var crewM = crewW * crewA;
     
     // Station PAX
     
-    var paxW = document.getElementById("paxW").innerHTML;
+    var paxW = document.getElementById("paxW").value;
     var paxA = 1514;
     var paxM = paxW * paxA;
     
     // Station Baggage
     
-    var baggageW = document.getElementById("baggageW").innerHTML;
+    var baggageW = document.getElementById("baggageW").value;
     var baggageA = 1514;
     var baggageM = baggageW * baggageA;
 
@@ -49,7 +49,7 @@ function wbcalculate(){
     
     // Station Fuel
     
-    var fuelW = document.getElementById("fuelW").innerHTML;
+    var fuelW = document.getElementById("fuelW").value;
     var fuelA = 1715;
     var fuelM = fuelW * fuelA;
 
@@ -63,7 +63,7 @@ function wbcalculate(){
     
     // startup; taxi; runup fuel
     
-    var taxiW = document.getElementById("taxiW").innerHTML;
+    var taxiW = document.getElementById("taxiW").value;
     var taxiM = fuelA * taxiW;
 
     // Takeoff W
@@ -76,7 +76,7 @@ function wbcalculate(){
     
     // Trip Fuel
     
-    var tripW = document.getElementById("tripW").innerHTML; 
+    var tripW = document.getElementById("tripW").value; 
     var tripM = tripW * fuelA;
 
     // Landing Weight
