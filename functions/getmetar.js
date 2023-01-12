@@ -28,13 +28,13 @@ function success(response) {
       function quicklabel(){
         document.getElementById('quicklabel').innerText = metar.flight_category;
         var quickla = metar.flight_category;
-        if (quickla = "VFR") {
+        if (quickla == "VFR") {
           document.getElementById("quicklabel").style.background = "#04AA6D";
-        } else (quickla = "MVFR"){
+        } if (quickla == "MVFR"){
           document.getElementById("quicklabel").style.background = "#2196F3";
-        } else (quickla = "IFR") {
+        } if (quickla == "IFR") {
           document.getElementById("quicklabel").style.background = "#f44336";
-        } else (quickla = "LIFR") {
+        } if (quickla == "LIFR") {
           document.getElementById("quicklabel").style.background = "#b300b3";
         }
       }
