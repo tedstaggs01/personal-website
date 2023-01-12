@@ -30,11 +30,11 @@ function success(response) {
         var quickla = metar.flight_category;
         if (quickla == "VFR") {
           document.getElementById("quicklabel").style.background = "#04AA6D";
-        } if (quickla == "MVFR"){
+        } else if (quickla == "MVFR"){
           document.getElementById("quicklabel").style.background = "#2196F3";
-        } if (quickla == "IFR") {
+        } else if (quickla == "IFR") {
           document.getElementById("quicklabel").style.background = "#f44336";
-        } if (quickla == "LIFR") {
+        } else if (quickla == "LIFR") {
           document.getElementById("quicklabel").style.background = "#b300b3";
         }
       }
