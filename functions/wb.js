@@ -1,7 +1,7 @@
 
 // Add Airplane profiles
 
-var lxmdt = {
+/* var lxmdt = {
     type: "Airvan",
     model: "GA8",
     emptyweight: 1051,
@@ -11,7 +11,7 @@ var lxmdt = {
     baggagearm: 1514,
     fuelarm: 1715,
     fuelcapacity: "xyz"
-};
+}; */
 
 function wbcalculate(){
     
