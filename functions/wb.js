@@ -74,3 +74,5 @@ function wbcalculate(){
 
 // these values will be transferred into a graph
 // pdf output upon button 
+
+// parse Int --> solution?
