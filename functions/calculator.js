@@ -1,4 +1,4 @@
-var totfuel;
+var totfuel = 0; 
 
 function fuelcalculate() {
     var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
