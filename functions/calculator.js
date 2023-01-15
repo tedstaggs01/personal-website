@@ -102,7 +102,7 @@ function wbcalculate() {
    var takeoffM = rampM - taxiM;
    var takeoffA = takeoffM / takeoffW;
    var takeoffWlbsint = takeoffW * 2.20462262;
-   var takeoffWlbs = PaymentRequest(takeoffWlbsint);
+   var takeoffWlbs = parseInt(takeoffWlbsint);
    document.getElementById("toW").innerHTML = takeoffW + " kg" + " | " + takeoffWlbs + " lbs";
    // Trip Fuel
    var tripget = document.getElementById("tripW").value; 
