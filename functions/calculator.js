@@ -27,6 +27,7 @@ function fuelcalculate() {
     // Output this required R and Left 
     document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
     document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
+    var totfuel = fuelAR + fuelAL + required;
     if (desired > 332) {
        alert("Check P.O.H. Fuel Limitations Section 2-9!");
     } else {
@@ -78,10 +79,10 @@ function wbcalculate() {
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
    // Station Fuel
-   var fuelget = document.getElementById("fuelW").value;
-   var fuelW = parseInt(fuelget);
+   var fuelW = totfuel * 0.74; // takes litres into kg from previous function...
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
+   document.getElementById().innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)"
    // Ramp
    var rampW = zerofuelW + fuelW;
    var rampM = zerofuelM + fuelM;
