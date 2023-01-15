@@ -29,7 +29,7 @@ function fuelcalculate() {
     // Output this required R and Left 
     document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
     document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
-    var totfuel = fuelAR + fuelAL + required;
+    var totfuel = fuelA + required;
     if (desired > 332) {
        alert("Check P.O.H. Fuel Limitations Section 2-9!");
     } else {
