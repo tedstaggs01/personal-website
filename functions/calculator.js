@@ -82,7 +82,7 @@ function wbcalculate() {
    var fuelW = totfuel * 0.74; // takes litres into kg from previous function...
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
-   document.getElementById().innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)"
+   document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)"
    // Ramp
    var rampW = zerofuelW + fuelW;
    var rampM = zerofuelM + fuelM;
