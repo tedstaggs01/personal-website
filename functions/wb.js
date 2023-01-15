@@ -13,7 +13,7 @@
     fuelcapacity: "xyz"
 }; */
 
-function wbcalculate(){
+function wbcalculate() {
     // BEM
     var emptyweightW = 1051;
     var emptyweightA = 1912;
