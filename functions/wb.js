@@ -38,7 +38,8 @@ function wbcalculate() {
     var zerofuelW = emptyweightW + crewW + paxW + baggageW;
     var zerofuelM = emptyweightM + crewM + paxM + baggageM;
     var zerofuelA = zerofuelM / zerofuelW;
-    var zerofuelWlbs = zerofuelW * 2.20462262;
+    var zerofuelWlbsint = zerofuelW * 2.20462262;
+    var zerofuelWlbs = parseInt(zerofuelWlbsint);
     document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
     // Station Fuel
     var fuelget = document.getElementById("fuelW").value;
@@ -49,7 +50,8 @@ function wbcalculate() {
     var rampW = zerofuelW + fuelW;
     var rampM = zerofuelM + fuelM;
     var rampA = zerofuelM / zerofuelW;
-    var rampWlbs = rampW + 2.20462262;
+    var rampWlbsint = rampW + 2.20462262;
+    var rampWlbs = parseInt(rampWlbsint);
     document.getElementById("rampW").innerHTML = rampW + " kg" + " | " + rampWlbs + " lbs";
     // startup; taxi; runup fuel
     var taxiget = document.getElementById("taxiW").value;
@@ -59,7 +61,8 @@ function wbcalculate() {
     var takeoffW = rampW - taxiW;
     var takeoffM = rampM - taxiM;
     var takeoffA = takeoffM / takeoffW;
-    var takeoffWlbs = takeoffW * 2.20462262;
+    var takeoffWlbsint = takeoffW * 2.20462262;
+    var takeoffWlbs = PaymentRequest(takeoffWlbsint);
     document.getElementById("toW").innerHTML = takeoffW + " kg" + " | " + takeoffWlbs + " lbs";
     // Trip Fuel
     var tripget = document.getElementById("tripW").value; 
@@ -69,7 +72,8 @@ function wbcalculate() {
     var landingW = takeoffW - tripW;
     var landingM = takeoffM - tripM;
     var landingA = landingM / landingW;
-    var landingWlbs = landingW * 2.20462262; 
+    var landingWlbsint = landingW * 2.20462262;
+    var landingWlbs = parseInt(landingWlbsint);
     document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
 }
 
