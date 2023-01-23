@@ -1,5 +1,3 @@
-var totfuel; 
-
 function fuelcalculate() {
     var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
     var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
@@ -29,7 +27,7 @@ function fuelcalculate() {
     // Output this required R and Left 
     document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
     document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
-    var totfuel = fuelA + required;
+    var totfuel = parseInt(fuelA + required);
     console.log(totfuel);
     if (desired > 332) {
        alert("Check P.O.H. Fuel Limitations Section 2-9!");
