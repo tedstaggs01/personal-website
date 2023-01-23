@@ -82,7 +82,9 @@ function wbcalculate() {
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
    // Station Fuel
-   var fuelW = totfuel * 0.74; // takes litres into kg from previous function...
+   var fuelWget = parseInt(totfuel);
+   var fuelW = fuelWget * 0.74;
+   // takes litres into kg from previous function...
    console.log(fuelW);
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
