@@ -1,2 +1,6 @@
 *) Add WX equipment in ELNT that transmits data to 
 *) Add PDF feature of Loadsheet...
+*) Code new jump manifestation program... that allows it to autmatically calculate loadsheets ... for Pilots
+ The pilot can thus view planned loads, load status, ... 
+*) Checklists Software like SWISS one
+*) 
