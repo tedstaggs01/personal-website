@@ -28,12 +28,13 @@
     <script defer src="/functions/getmetar.js"></script>
     <script defer src="/functions/checklist.js"></script>
     <div class="text-center">
-        <h1>CHECKLIST</h1>
+        <h1>CHECKLISTS</h1>
     </div>
     <hr>
     <div class="text-center">
         <h1>BEFORE START</h1>
     </div>
+    <hr>
     <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
         <label class="form-check-label" for="defaultCheck1">
@@ -104,6 +105,26 @@
 
     <h1>SHUTDOWN</h1>
     <hr>
+    <div class="accordion accordion-lg" id="accordionLGExample">
+        <div class="accordion-item">
+            <div class="text-center">
+                <div class="accordion-header" id="accordion-lg-headingOne">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#accordion-lg-collapseOne" aria-expanded="false" aria-controls="accordion-lg-collapseOne">
+                      BEFORE START
+                    </a>
+                  </div>
+            </div>
+            <div id="accordion-lg-collapseOne" class="accordion-collapse collapse" aria-labelledby="accordion-lg-headingOne" data-bs-parent="#accordionLGExample">
+              <div class="accordion-body">
+                <input type="checkbox" id="check" onclick="markchecklistitem()">
+                   <label for="checkvalue"><h2>CHECK</h2></label>
+                   <div id="checkvalue">Checked</div>
+              </div>
+            </div>
+        </div>
+
+
+        <br><br><br>
 
 
 
