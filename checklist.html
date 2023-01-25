@@ -26,7 +26,10 @@
     <script defer src="/functions/calculator.js"></script>
     <script defer src="/functions/time.js"></script>
     <script defer src="/functions/getmetar.js"></script>
-    <h1>CHECKLIST</h1>
+    <script defer src="/functions/checklist.js"></script>
+    <div class="text-center">
+        <h1>CHECKLIST</h1>
+    </div>
     <hr>
     <div class="text-center">
         <h1>BEFORE START</h1>
@@ -75,6 +78,10 @@
       </div>
     <hr>
     <h1>STARTING ENGINE</h1>
+    <input type="checkbox" id="check" onclick="markchecklistitem()">
+    <label for="checkvalue"><h2>CHECK</h2></label>
+    <div id="checkvalue">Checked</div>
+
     <hr>
 
     <h1>BEFORE TAKE OFF</h1>
