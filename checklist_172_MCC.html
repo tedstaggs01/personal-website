@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/public/css/quicklabel_vfr.css">
-    <link rel="stylesheet" href="wb.css">
+    <link rel="stylesheet" href="/public/css/checklist.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
   </head>
 <body>
@@ -42,63 +42,22 @@
             </div>
             <div id="accordion-lg-collapseOne" class="accordion-collapse collapse" aria-labelledby="accordion-lg-headingOne" data-bs-parent="#accordionLGExample">
               <div class="accordion-body">
-                <input type="checkbox" id="check1" onclick="markchecklistitem1()">
-                <label for="check1">
-                <span id="checkvalue1">PREFLIGHT INSPECTION</span>
-                </label>
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Checkbox 1</label>
                 <br>
-                <input type="checkbox" id="check2" onclick="markchecklistitem2()">
-                <label for="check2">
-                <span id="checkvalue2">SEAT BELTS</span>
-                </label>
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">Checkbox 2</label>
                 <br>
-                <input type="checkbox" id="check3" onclick="markchecklistitem3()">
-                <label for="check3">
-                <span id="checkvalue3">CIRCUIT BREAKERS</span>
-                </label>
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">Checkbox 3</label>
                 <br>
-                <input type="checkbox" id="check4" onclick="markchecklistitem4()">
-                <label for="check4">
-                <span id="checkvalue4">STBY BATT</span>
-                </label>
-                <br>
-                <input type="checkbox" id="check5" onclick="markchecklistitem5()">
-                <label for="check5">
-                <span id="checkvalue5">PARKING BRAKE</span>
-                </label>
-                <br>
-                <input type="checkbox" id="check6" onclick="markchecklistitem6()">
-                <label for="check6">
-                <span id="checkvalue6">FUEL SELECTOR</span>
-                </label>
-                <br>
-                <input type="checkbox" id="check7" onclick="markchecklistitem7()">
-                <label for="check7">
-                <span id="checkvalue7">BRIEFING</span>
-                </label>
+                <div class="text-center">
+                  <p id="completionText" style="display:none">BEFORE START CHECKLIST COMPLETED</p>
+                </div>
             </div>
         </div>
     </div>
     <br>
-    <div class="accordion accordion-lg" id="accordionLGExample">
-        <div class="accordion-item">
-            <div class="text-center">
-                <div class="accordion-header" id="accordion-lg-headingtwo">
-                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#accordion-lg-collapsetwo" aria-expanded="false" aria-controls="accordion-lg-collapsetwo">
-                      BEFORE START 
-                    </a>
-                  </div>
-            </div>
-            <div id="accordion-lg-collapsetwo" class="accordion-collapse collapse" aria-labelledby="accordion-lg-headingtwo" data-bs-parent="#accordionLGExample">
-              <div class="accordion-body">
-                <input type="checkbox" id="check" onclick="markchecklistitem()">
-                   <label for="checkvalue"><h2>CHECK</h2></label>
-                   <div id="checkvalue">Checked</div>
-              </div>
-            </div>
-        </div>
-    </div>
-
 
 
 
