@@ -1,6 +1,6 @@
 input[type="checkbox"]:checked + label {
     color: green;
-  }
+}
 
 p {
   text-align: center;
