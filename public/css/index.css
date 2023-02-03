@@ -7,3 +7,23 @@ body {
  .instructions {
    margin-top: 40px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  border-top: 1px solid black;
+  padding: 8px;
+  background-color: lightgray;
+}
+
+td {
+  text-align: left;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+
