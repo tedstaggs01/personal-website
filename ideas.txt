@@ -15,3 +15,10 @@ Pilots get access to everything except administration
 
 --> APP for all of this aswell??
 
+The information provided on this website is for general informational purposes only. This website is not intended to be relied upon as a substitute for professional advice, including but not limited to weather information, fuel and weight calculations, performance calculations, and planning. The website host makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+
+The website host shall not be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
+
+Every effort is made to keep the website up and running smoothly. However, the website host takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+
+By using this website, you agree to this disclaimer and accept that the website host shall not be held liable for any inaccuracies or errors in the information provided.
