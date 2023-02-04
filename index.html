@@ -27,6 +27,7 @@
     <script defer src="/functions/time.js"></script>
     <script defer src="/functions/getmetar.js"></script>
     <script defer src="/functions/fielopener.js"></script>
+    <script defer src="/functions/comments.js"></script>
     <header>
       <div class="text-center">
          <h1>PILOT TOOLS - JUMP PILOTS CPL</h1>
@@ -81,8 +82,22 @@
         <h2><a href="wxbrief.html">WX BRIEFING</a></h2>
       </div>
       <hr>
-      <h2>PIREPS (WIP ... to be implemented)</h2>
-      <pre>Pilots may alert others of potenital threats and hazards...</pre>
+      <div class="text-center">
+        <h2>PIREPS</h2>
+      </div>
+      <div id="comment-section">
+        <h3>Leave a Comment:</h3>
+        <textarea id="comment-text"></textarea>
+        <button id="post-comment">Post</button>
+        <button id="edit-comment" style="display: none;">Edit</button>
+      </div>
+      
+      <div id="comments-display">
+        <h3>Comments:</h3>
+        <ul id="comments-list">
+        </ul>
+      </div>
+      
       <hr>
       <h2>AIRSPACE (WIP ... to be implemented)</h2>
       <pre>Check Relevant airspace and operational restrictions...</pre>
