@@ -28,8 +28,7 @@ function fuelcalculate() {
     document.getElementById("left").innerHTML = "LEFT tank requires " + requiredL + " litres";
     document.getElementById("right").innerHTML = "RIGHT tank requires " + requiredR + " litres";
     var totfuel = parseInt(fuelA + required);
-    document.getElementById("totalf").innerHTML = "TOTAL FUEL =  " + totfuel + " litres";
-    console.log(totfuel);
+    document.getElementById("totalf").innerHTML = "TOTAL FUEL =  " + totfuel + " litres"; 
     if (desired > 332) {
        alert("Check P.O.H. Fuel Limitations Section 2-9!");
     } else {
