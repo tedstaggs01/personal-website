@@ -25,8 +25,8 @@ function fuelcalculate() {
     var requiredL = desiredL - fuelAL;
     var requiredR = desiredR - fuelAR;
     // Output this required R and Left 
-    document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
-    document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
+    document.getElementById("left").innerHTML = "LEFT tank requires " + requiredL + " litres";
+    document.getElementById("right").innerHTML = "RIGHT tank requires " + requiredR + " litres";
     var totfuel = parseInt(fuelA + required);
     document.getElementById("totalf").innerHTML = "TOTAL FUEL =  " + totfuel + " litres";
     console.log(totfuel);
