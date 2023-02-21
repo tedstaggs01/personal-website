@@ -82,7 +82,7 @@ function wbcalculate(){
    // Fuel 
    var fuelW = Math.round(totfuel * 0.74);
    var fuelWlbs = Math.round(fuelW * 2.20462262);
-   document.getElementById("fuelW").innerHTML =  fuelW + " kg " + " | " + fuelWlbs + " lbs (desity @0.74)";
+   document.getElementById("fuelW").innerHTML =  fuelW + " kg " + " | " + fuelWlbs + " lbs (@0.74)";
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
    // Ramp
@@ -103,6 +103,9 @@ function wbcalculate(){
    var takeoffWlbsint = takeoffW * 2.20462262;
    var takeoffWlbs = parseInt(takeoffWlbsint);
    document.getElementById("toW").innerHTML = takeoffW + " kg" + " | " + takeoffWlbs + " lbs";
+   if (takeoffW > 1905){
+      alert("Check Weights: Above allowed Take-off Mass!");
+   }
    // Trip Fuel
    var tripget = document.getElementById("tripW").value; 
    var tripW = parseInt(tripget);
@@ -114,4 +117,7 @@ function wbcalculate(){
    var landingWlbsint = landingW * 2.20462262;
    var landingWlbs = parseInt(landingWlbsint);
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
+   if (landingW > 1814){
+      alert("Check Weights: Above allowed Landing Mass!");
+   }
 }
