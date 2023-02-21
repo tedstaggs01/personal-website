@@ -66,8 +66,8 @@ function fuelcalculate() {
     var ntrip = parseInt(trip);
     var naltn = parseInt(altn);
     var nextra = parseInt(extra);
-    var cont = parseInt(5% ntrip); 
-    var res; 
+    var cont = parseInt(ntrip * 0.05); 
+    var res = consumption; // based on aerosport policy
     var start; 
     //sdf
     var desired = trip + cont + altn + res + start;
