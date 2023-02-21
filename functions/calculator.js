@@ -92,8 +92,10 @@ function wbcalculate(){
    var rampWlbsint = rampW + 2.20462262;
    var rampWlbs = parseInt(rampWlbsint);
    document.getElementById("rampW").innerHTML = rampW + " kg" + " | " + rampWlbs + " lbs";
-   // Taxi 
-   var taxiW = document.getElementById("taxiW").value; 
+    // startup; taxi; runup fuel
+    var taxiget = document.getElementById("taxiW").value;
+    var taxiW = parseInt(taxiget);
+    var taxiM = fuelA * taxiW; 
    // Takeoff 
    var takeoffW = rampW - taxiW;
    var takeoffM = rampM - taxiM;
@@ -112,20 +114,4 @@ function wbcalculate(){
    var landingWlbsint = landingW * 2.20462262;
    var landingWlbs = parseInt(landingWlbsint);
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
-
-
-   
 }
-
-/* // Problem Staer Here!!!
-
- 
-
-   
-   // startup; taxi; runup fuel
-   var taxiget = document.getElementById("taxiW").value;
-   var taxiW = parseInt(taxiget);
-   var taxiM = fuelA * taxiW;
-   
-
-   */
