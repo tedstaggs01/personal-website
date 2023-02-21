@@ -82,7 +82,7 @@ function wbcalculate(){
    // Fuel 
    var fuelWget = totfuel * 0.74;
    var fuelWlbs = fuelWget * 2.20462262;
-   document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS 100LL" + fuelWget + " kg" + fuelWlbs + " lbs (desity @0.74)";
+   document.getElementById("fuelW").innerHTML =  fuelWget + " kg " + fuelWlbs + " lbs (desity @0.74)";
 }
 
 /* // Problem Staer Here!!!
