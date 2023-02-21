@@ -27,7 +27,7 @@ function fuelcalculate() {
     // Output this required R and Left 
     document.getElementById("left").innerHTML = "LEFT tank requires " + requiredL + " litres";
     document.getElementById("right").innerHTML = "RIGHT tank requires " + requiredR + " litres";
-    var totfuel = parseInt(fuelA + required);
+    window.totfuel = parseInt(fuelA + required);
     document.getElementById("totalf").innerHTML = "TOTAL FUEL =  " + totfuel + " litres"; 
     if (desired > 332) {
        alert("Check P.O.H. Fuel Limitations Section 2-9!");
@@ -79,8 +79,13 @@ function wbcalculate(){
    var zerofuelWlbsint = zerofuelW * 2.20462262;
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
+   // Fuel 
+   var fuelWget = totfuel * 0.74;
+   var fuelWlbs = fuelWget * 2.20462262;
+   document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS 100LL" + fuelWget + " kg" + fuelWlbs + " lbs (desity @0.74)";
+}
 
-   // Problem Staer Here!!!
+/* // Problem Staer Here!!!
 
    // Station Fuel
    var fuelWget = parseInt(totfuel);
@@ -119,5 +124,5 @@ function wbcalculate(){
    var landingWlbsint = landingW * 2.20462262;
    var landingWlbs = parseInt(landingWlbsint);
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
-}
 
+   */
