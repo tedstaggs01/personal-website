@@ -52,7 +52,7 @@ function fuelcalculate() {
 }
 
 function wbcalculate() {
-   // BEM
+   // BEM --> Change to standard BEM: 
    var emptyweightget = document.getElementById("bem").value;
    var emptyweightW = parseInt(emptyweightget);
    var emptyweightA = 1912;
@@ -79,6 +79,9 @@ function wbcalculate() {
    var zerofuelWlbsint = zerofuelW * 2.20462262;
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
+
+   // Problem Staer Here!!!
+
    // Station Fuel
    var fuelWget = parseInt(totfuel);
    var fuelW = fuelWget * 0.74;
@@ -86,7 +89,8 @@ function wbcalculate() {
    console.log(fuelW);
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
-   document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)"
+   // document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)" 
+   
    // Ramp
    var rampW = zerofuelW + fuelW;
    var rampM = zerofuelM + fuelM;
@@ -117,3 +121,4 @@ function wbcalculate() {
    var landingWlbs = parseInt(landingWlbsint);
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
 }
+
