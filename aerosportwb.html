@@ -61,10 +61,14 @@
     </header>
       <div class="instructions">
         <div class="text-center">
-          <h1>FUEL CALCULATOR</h1>
+          <h1>1. FUEL CALCULATOR</h1>
+          <p>How much fuel do I need to put in each tank? </p>
+          <p>Calculator includes Aerosport club internal policies.</p>
+          <p>Select Airplane!</p>
       </div>
       <br>
-      <div class="text-center">
+      <!-- 
+        <div class="text-center">
         <p>
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Instructions
@@ -120,6 +124,9 @@
         <p>This calculator serves only as a tool and a recalculation should be considered to make up your own mind</p>
         <p>Weight and Balance Calculator integrates the fuel calculated into the calculation, you must use both to make it work!</p>
       </div>
+
+      -->
+      
       <hr>
       </div>
       <div class="fuelenter"> 
@@ -133,12 +140,12 @@
               <input type="number" name="fuelAR" class="js-input-mask form-control" id="fuelAR"> 
             </div>
             <div class="mb-4">
-              <label for="stick" class="form-label"><h4>Enter <span class="badge bg-soft-primary text-primary">STICKS</span> desired*</h4></label>
-              <input type="number" name="stick" class="js-input-mask form-control" id="stick"> 
+              <label for="trip" class="form-label"><h4>Enter <span class="badge bg-soft-primary text-primary">TRIP FUEL</span> required (litres)*</h4></label>
+              <input type="number" name="trip" class="js-input-mask form-control" id="trip"> 
             </div>
             <div class="mb-4">
-              <label for="ferry" class="form-label"><h4>Enter <span class="badge bg-soft-primary text-primary">FERRYS</span> desired*</h4></label>
-              <input type="number" name="ferry" class="js-input-mask form-control" id="ferry"> 
+              <label for="altn" class="form-label"><h4>Enter <span class="badge bg-soft-primary text-primary">ALTERNATE</span> required (litres)*</h4></label>
+              <input type="number" name="alternate" class="js-input-mask form-control" id="altn"> 
             </div>
             <div class="mb-4">
               <label for="extra" class="form-label"><h4>Enter <span class="badge bg-soft-primary text-primary">EXTRA</span> fuel desired (litres)*</h4></label>
@@ -167,7 +174,8 @@
             </div>
         </form>
         <hr>
-        <div class="text-center"><h1>MASS AND BALANCE: LX-MDT</h1></div>
+        <div class="text-center"><h1>MASS AND BALANCE</h1></div>
+        <p>Select Airplane!</p>
         <form>
           <h3>Basic Empty Mass</h3>
           <hr>

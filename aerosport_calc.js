@@ -1,60 +1,35 @@
-
 function fuelcalculate() {
     var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
     var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
-    var stick = document.getElementById("stick").value; // grap input STICKS desired
-    var ferry = document.getElementById("ferry").value; // grap input FERRY desired
+    var trip = document.getElementById("trip").value; // grap input trip desired
+    var altn = document.getElementById("altn").value; // grap input altn desired
     var extra = document.getElementById("extra").value; // grap input extra desired
-    
     var nfuelAR = parseInt(fuelAR);
     var nfuelAL = parseInt(fuelAL);
     var fuelA = nfuelAR + nfuelAL; // fuel available
-    var onestick = 50; // Fuel required for 1 Stick
-    var oneferry = 30; // Fuel required for 1 Ferry
-    var nstick = parseInt(stick);
-    var nferry = parseInt(ferry);
+    var ntrip = parseInt(trip);
+    var naltn = parseInt(altn);
     var nextra = parseInt(extra);
-    var stickD = nstick * 50; // Fuel for sticks desired
-    var ferryD = nferry * 30; // Fuel for ferrys desired
-    var minimum = 65; // Alternate + Reserve: 20L + 45L 
-    var desired = stickD + ferryD + nextra + minimum; // desired fuel for start-up
+    var cont = parseInt(5% ntrip); 
+    var res; 
+    var start; 
+    //sdf
+    var desired = trip + cont + altn + res + start;
     var required = desired - fuelA; // fuel required to be fuelled
-    var perR = undefined;
-    var perL = undefined;
     var desiredL = desired / 2;
     var desiredR = desired / 2;
     // fuel desired L equals R thus Fuel is balanced
     var requiredL = desiredL - fuelAL;
     var requiredR = desiredR - fuelAR;
-    var totfuel = parseInt(fuelA + required);
-
-    document.getElementById("left").innerHTML = "Left tank requires " + requiredL + " litres";
-    document.getElementById("right").innerHTML = "Right tank requires " + requiredR + " litres";
-    console.log(totfuel);
-    if (desired > 332) {
-       alert("Check P.O.H. Fuel Limitations Section 2-9!");
-    } else {
-     alert("Note Fuel percentage distribution is not yet implemented!");
-    }
-    if (nstick > 4) {
-       alert("Check Take - off Performance!");
-    }
-    if (desired < 65) {
-     alert("Fuel Reserve ONLY! Check fuel desired!");
-    }
-    if (nferry > 2) {
-     alert("Are more than 2 ferrys required?");
-    }
-    if (requiredL > 170) {
-     alert("Check P.O.H. Fuel Limitations Section 2-9!");
-    }
-    if (requiredR > 170) {
-     alert("Check P.O.H. Fuel Limitations Section 2-9!");
-    }         
+    // Output this required R and Left 
+    document.getElementById("left").innerHTML = "LEFT tank requires " + requiredL + " litres";
+    document.getElementById("right").innerHTML = "RIGHT tank requires " + requiredR + " litres";
+    window.totfuel = parseInt(fuelA + required);
+    document.getElementById("totalf").innerHTML = "TOTAL FUEL =  " + totfuel + " litres";         
 }
 
-function wbcalculate() {
-   // BEM
+function wbcalculate(){
+   // BEM --> Change to standard BEM: 
    var emptyweightget = document.getElementById("bem").value;
    var emptyweightW = parseInt(emptyweightget);
    var emptyweightA = 1912;
@@ -81,14 +56,12 @@ function wbcalculate() {
    var zerofuelWlbsint = zerofuelW * 2.20462262;
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
-   // Station Fuel
-   var fuelWget = parseInt(totfuel);
-   var fuelW = fuelWget * 0.74;
-   // takes litres into kg from previous function...
-   console.log(fuelW);
+   // Fuel 
+   var fuelW = Math.round(totfuel * 0.74);
+   var fuelWlbs = Math.round(fuelW * 2.20462262);
+   document.getElementById("fuelW").innerHTML =  fuelW + " kg " + " | " + fuelWlbs + " lbs (desity @0.74)";
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
-   document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)"
    // Ramp
    var rampW = zerofuelW + fuelW;
    var rampM = zerofuelM + fuelM;
@@ -96,11 +69,11 @@ function wbcalculate() {
    var rampWlbsint = rampW + 2.20462262;
    var rampWlbs = parseInt(rampWlbsint);
    document.getElementById("rampW").innerHTML = rampW + " kg" + " | " + rampWlbs + " lbs";
-   // startup; taxi; runup fuel
-   var taxiget = document.getElementById("taxiW").value;
-   var taxiW = parseInt(taxiget);
-   var taxiM = fuelA * taxiW;
-   // Takeoff W
+    // startup; taxi; runup fuel
+    var taxiget = document.getElementById("taxiW").value;
+    var taxiW = parseInt(taxiget);
+    var taxiM = fuelA * taxiW; 
+   // Takeoff 
    var takeoffW = rampW - taxiW;
    var takeoffM = rampM - taxiM;
    var takeoffA = takeoffM / takeoffW;
