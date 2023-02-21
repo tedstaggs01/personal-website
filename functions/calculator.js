@@ -105,6 +105,7 @@ function wbcalculate(){
    document.getElementById("toW").innerHTML = takeoffW + " kg" + " | " + takeoffWlbs + " lbs";
    if (takeoffW > 1905){
       alert("Check Weights: Above allowed Take-off Mass!");
+      document.getElementById("toW").style.color = "red";
    }
    // Trip Fuel
    var tripget = document.getElementById("tripW").value; 
@@ -119,5 +120,22 @@ function wbcalculate(){
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
    if (landingW > 1814){
       alert("Check Weights: Above allowed Landing Mass!");
+      document.getElementById("ldgW").style.color = "red";
    }
 }
+
+/* Maximum Take-Off Weight: .................................................. 1905 kg (4200 lb)
+Maximum Landing Weight: ................................................... 1814 kg (4000 lb)
+Maximum Weight in Main Cargo Area:.................................. 680 kg (1500 lb)
+Maximum Weight on Cabin Baggage Shelf:.......................... 113 kg (250 lb)
+Maximum Weight in Aft Luggage Bin:.................................... 22 kg (50 lb) 
+
+Forward Limit: 1219 mm (48 in) aft of datum at 1089 kg (2400 lb) and below;
+1448 mm (57 in) aft of datum at 1905 kg (4200 lb), linear variation
+between these points.
+Aft Limit: 1626 mm (64 in) aft of datum at all weights
+Datum: Firewall (Fuselage Station 0)
+[located 1057 mm (41.63 in) forward of wing leading edge]
+
+
+*/ 
