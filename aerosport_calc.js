@@ -1,3 +1,59 @@
+var lxaib = {
+    registration: "LX-AIB",
+    company: "PIPER", 
+    type: "PA-28", 
+    consumption: 35,
+    groundf: 10,
+    bemW: 647,
+    bemA: 2.112,
+    crewA: 2.05,
+    paxA: 2.993,
+    baggageA: 3.627,
+    fuelA: 2.413,
+};
+
+var lxaif = {
+    registration: "LX-AIF",
+    company: "PIPER", 
+    type: "PA-28", 
+    consumption: 35,
+    groundf: 10,
+    bemW: 653,
+    bemA: 2.1278,
+    crewA: 2.05,
+    paxA: 2.993,
+    baggageA: 3.627,
+    fuelA: 2.413,
+};
+
+var lxaig = {
+    registration: "LX-AIG",
+    company: "PIPER", 
+    type: "PA-28", 
+    consumption: 35,
+    groundf: 10,
+    bemW: 683,
+    bemA: 2.168,
+    crewA: 2.05,
+    paxA: 2.993,
+    baggageA: 3.627,
+    fuelA: 2.413,
+};
+
+var lxaiw = {
+    registration: "LX-AIW",
+    company: "PIPER", 
+    type: "PA-28", 
+    consumption: 35,
+    groundf: 10,
+    bemW: 706,
+    bemA: 2.191,
+    crewA: 2.05,
+    paxA: 2.993,
+    baggageA: 3.627,
+    fuelA: 2.413,
+};
+
 function fuelcalculate() {
     var fuelAR = document.getElementById("fuelAR").value; // grap input fuel in RIGHT TANK
     var fuelAL = document.getElementById("fuelAL").value; // grap input fuel in LEFT TANK
