@@ -80,21 +80,11 @@ function wbcalculate(){
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
    document.getElementById("zerofuelW").innerHTML = zerofuelW + " kg" + " | " + zerofuelWlbs + " lbs";
    // Fuel 
-   var fuelWget = totfuel * 0.74;
-   var fuelWlbs = fuelWget * 2.20462262;
-   document.getElementById("fuelW").innerHTML =  fuelWget + " kg " + fuelWlbs + " lbs (desity @0.74)";
-}
-
-/* // Problem Staer Here!!!
-
-   // Station Fuel
-   var fuelWget = parseInt(totfuel);
-   var fuelW = fuelWget * 0.74;
+   var fuelW = totfuel * 0.74;
+   var fuelWlbs = fuelW * 2.20462262;
+   document.getElementById("fuelW").innerHTML =  fuelW + " kg " + " | " + fuelWlbs + " lbs (desity @0.74)";
    var fuelA = 1715;
    var fuelM = fuelW * fuelA;
-   // document.getElementById("fuelW").innerHTML = totfuel + " litres AVGAS100LL | " + fuelW + " kg (density @0.74)" 
-   document.getElementById("fuelW").innerHTML = "test";
-
    // Ramp
    var rampW = zerofuelW + fuelW;
    var rampM = zerofuelM + fuelM;
@@ -102,10 +92,6 @@ function wbcalculate(){
    var rampWlbsint = rampW + 2.20462262;
    var rampWlbs = parseInt(rampWlbsint);
    document.getElementById("rampW").innerHTML = rampW + " kg" + " | " + rampWlbs + " lbs";
-   // startup; taxi; runup fuel
-   var taxiget = document.getElementById("taxiW").value;
-   var taxiW = parseInt(taxiget);
-   var taxiM = fuelA * taxiW;
    // Takeoff W
    var takeoffW = rampW - taxiW;
    var takeoffM = rampM - taxiM;
@@ -124,5 +110,20 @@ function wbcalculate(){
    var landingWlbsint = landingW * 2.20462262;
    var landingWlbs = parseInt(landingWlbsint);
    document.getElementById("ldgW").innerHTML = landingW + " kg" + " | " + landingWlbs + " lbs";
+
+
+   
+}
+
+/* // Problem Staer Here!!!
+
+ 
+
+   
+   // startup; taxi; runup fuel
+   var taxiget = document.getElementById("taxiW").value;
+   var taxiW = parseInt(taxiget);
+   var taxiM = fuelA * taxiW;
+   
 
    */
