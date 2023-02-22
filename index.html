@@ -33,9 +33,10 @@
     <script>
       function genPDF() {
         var doc = new jsPDF();
-
-        doc.text(20,20, "Loadsheet");
-        doc.save("Test.pdf");
+        doc.addFont("Courier");
+        doc.setFont("Courier");
+        doc.text(20,20, "PLANNED FUEL");
+        doc.save("loadsheet.pdf");
       }
 
     </script>
