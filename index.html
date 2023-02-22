@@ -28,6 +28,17 @@
     <script defer src="/functions/getmetar.js"></script>
     <script defer src="/functions/fielopener.js"></script>
     <script defer src="/functions/comments.js"></script>
+    <script defer src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script>
+      function genPDF() {
+        var doc = new jsPDF();
+
+        doc.text(20,20, "Loadsheet");
+        doc.save("Test.pdf");
+      }
+
+    </script>
     <header>
       <div class="text-center">
          <a href="index.html"><img src="/images/Screenshot 2023-02-18 at 21.19.48.png"></a>
@@ -283,7 +294,7 @@
           <div class="text-center">
             <img src="/images/airplane compartments.png" alt="comaprtments">
             <br><br>
-            <button type="button" class="btn btn-secondary btn-lg">Generate Loaddsheet</button>
+            <input type="button" onclick="javascript:genPDF()" class="btn btn-secondary btn-lg" value="Generate Loadsheet">
           </div>
           <br>
         </form>
