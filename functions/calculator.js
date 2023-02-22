@@ -135,7 +135,5 @@ Forward Limit: 1219 mm (48 in) aft of datum at 1089 kg (2400 lb) and below;
 between these points.
 Aft Limit: 1626 mm (64 in) aft of datum at all weights
 Datum: Firewall (Fuselage Station 0)
-[located 1057 mm (41.63 in) forward of wing leading edge]
-
-
+[located 1057 mm (41.63 in) forward of wing leading edge]d
 */ 
