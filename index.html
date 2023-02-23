@@ -35,7 +35,12 @@
         var doc = new jsPDF();
         doc.addFont("Courier");
         doc.setFont("Courier");
+        doc.setLineWidth(0.5);
+        doc.line(20, 25, 60, 25);
         doc.text(20,20, "PLANNED FUEL");
+        doc.fromHTML($("#zerofuelW").get(0), 15, 15, {
+          'width': 170, 
+        });
         doc.save("loadsheet.pdf");
       }
 
