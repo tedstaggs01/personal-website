@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/public/css/index.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="stylesheet" href="/public/css/quicklabel_vfr.css">
+    <link rel="stylesheet" href="/public/css/quicklabel.css">
     <link rel="stylesheet" href="wb.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
   </head>
@@ -25,6 +25,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/X.X.X/handlebars.js"></script>
     <script defer src="/functions/calculator.js"></script>
     <script defer src="/functions/time.js"></script>
+    <script defer src="functions/time_left.js"></script>
     <script defer src="/functions/getmetar.js"></script>
     <script defer src="/functions/fielopener.js"></script>
     <script defer src="/functions/comments.js"></script>
@@ -76,7 +77,7 @@
       </nav>
       <hr>
       <div class="time">
-        <h2><span id="utc"></span> UTC | <span id="lmt"></span> LMT | <span id="quicklabel"></span><span id="timeleft">  TIME</span></h2>
+        <h2><span id="utc"></span> UTC | <span id="lmt"></span> LMT | <span id="quicklabel"></span>&nbsp <span id="timeleft"></span></h2>
       </div>
       <hr>
       <div class="card">
