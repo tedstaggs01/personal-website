@@ -1,26 +1,13 @@
-function getutc() {
-    const date = new Date();
-    console.log(date.getUTCHours());
-    console.log(date.getUTCMinutes());
-    document.getElementById("utc").innerHTML = date.getUTCHours() + ":"+  date.getUTCMinutes();
-}
-
-getutc();
-
-function getlmt(){
-    const lmt = new Date();
-    console.log(lmt.getHours());
-    console.log(lmt.getMinutes());
-    document.getElementById("lmt").innerHTML = lmt.getHours() + ":" + lmt.getMinutes();
-}
-
-getlmt();
-
-function getyear(){
-    const copyr = new Date();
-    console.log(copyr.getFullYear());
-    document.getElementById("copyright").innerHTML = copyr.getFullYear();
-}
-
-getyear();
-
+function updateTime() {
+    const now = new Date();
+    const localTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const utcHours = now.getUTCHours();
+    const utcMinutes = now.getUTCMinutes();
+    const utcTime = `${utcHours.toString().padStart(2, '0')}:${utcMinutes.toString().padStart(2, '0')}`;
+    document.getElementById('lmt').innerHTML = localTime;
+    document.getElementById('utc').innerHTML = utcTime;
+  }
+  
+  updateTime();
+  setInterval(updateTime, 1000); 
+  
