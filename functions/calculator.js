@@ -63,6 +63,7 @@ function wbcalculate(){
    var crewA = 965;
    var crewM = crewW * crewA;
    // Station PAX
+   // ZONE 1 (MAX 680kg)
    // ZONE A
    var zoneAget = document.getElementById("zoneA").value;
    var zoneA = parseInt(zoneAget);
@@ -78,7 +79,11 @@ function wbcalculate(){
    var zoneC = parseInt(zoneCget);
    var zoneCA = 2.861; 
    var zoneCM = zoneC * zoneCA;
-
+   // ZONE check MAX weight
+   var zonetotal = crewW + zoneA + zoneB + zoneC;
+   if (zonetotal > 680) {
+      alert("Check Traffic Load! 680kg limitation exceeded!")
+   }
    // Zero Fuel
    var zerofuelW = emptyweightW + crewW + zoneA + zoneB + zoneC;
    var zerofuelM = emptyweightM + crewM + zoneAM + zoneBM + zoneCM;
