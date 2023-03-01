@@ -262,16 +262,22 @@
           <h3>Traffic Load</h3>
           <hr>
           <div class="mb-3">
-            <label class="form-label" for="crewW"><h4><span class="badge bg-soft-primary text-primary">CREW</span></h4></label>
+            <label class="form-label" for="crewW"><h4><span class="badge bg-soft-primary text-primary">ZONE 1 (CREW)</span></h4></label>
             <input type="number" name="crewW" id="crewW" class="js-input-mask form-control" placeholder="mass(kg)">
           </div>
-          <div class="mb-3">
-            <label class="form-label" for="paxW"><h4><span class="badge bg-soft-primary text-primary">PAX</span></h4></label>
-            <input type="number" name="paxW" id="paxW" class="js-input-mask form-control" placeholder="mass(kg)">
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="baggageW"><h4><span class="badge bg-soft-primary text-primary">Baggage</span></h4></label>
-            <input type="number" name="baggageW" id="baggageW" class="js-input-mask form-control" placeholder="mass(kg)">
+          <div class="row align-items-end">
+            <div class="col">
+              <label class="form-label" for="paxW"><h4><span class="badge bg-soft-primary text-primary">ZONE 1 A (PAX)</span></h4></label>
+              <input type="number" name="paxW" id="paxW" class="js-input-mask form-control" placeholder="mass(kg)">
+            </div>
+            <div class="col">
+              <label class="form-label" for="paxW"><h4><span class="badge bg-soft-primary text-primary">ZONE 1 B (PAX)</span></h4></label>
+              <input type="number" name="paxW" id="paxW" class="js-input-mask form-control" placeholder="mass(kg)">
+            </div>
+            <div class="col">
+              <label class="form-label" for="baggageW"><h4><span class="badge bg-soft-primary text-primary">ZONE 1 C (PAX)</span></h4></label>
+              <input type="number" name="baggageW" id="baggageW" class="js-input-mask form-control" placeholder="mass(kg)">
+            </div>
           </div>
           <hr>
           <h3>Zero-Fuel Mass: <a id="zerofuelW"></a></h3>
