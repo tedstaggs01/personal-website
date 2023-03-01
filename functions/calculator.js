@@ -63,18 +63,25 @@ function wbcalculate(){
    var crewA = 965;
    var crewM = crewW * crewA;
    // Station PAX
-   var paxget = document.getElementById("paxW").value;
-   var paxW = parseInt(paxget);
-   var paxA = 1514;
-   var paxM = paxW * paxA;
-   // Station Baggage 
-   var baggageget = document.getElementById("baggageW").value;
-   var baggageW = parseInt(baggageget);
-   var baggageA = 1514;
-   var baggageM = baggageW * baggageA;
+   // ZONE A
+   var zoneAget = document.getElementById("zoneA").value;
+   var zoneA = parseInt(zoneAget);
+   var zoneAA = 1.524; 
+   var zoneAM = zoneA * zoneAA;
+   // ZONE B
+   var zoneBget = document.getElementById("zoneB").value;
+   var zoneB = parseInt(zoneBget);
+   var zoneBA = 1.968;
+   var zoneBM = zoneB * zoneBA;
+   // ZONE C
+   var zoneCget = document.getElementById("zoneC").value;
+   var zoneC = parseInt(zoneCget);
+   var zoneCA = 2.861; 
+   var zoneCM = zoneC * zoneCA;
+
    // Zero Fuel
-   var zerofuelW = emptyweightW + crewW + paxW + baggageW;
-   var zerofuelM = emptyweightM + crewM + paxM + baggageM;
+   var zerofuelW = emptyweightW + crewW + zoneA + zoneB + zoneC;
+   var zerofuelM = emptyweightM + crewM + zoneAM + zoneBM + zoneCM;
    var zerofuelA = zerofuelM / zerofuelW;
    var zerofuelWlbsint = zerofuelW * 2.20462262;
    var zerofuelWlbs = parseInt(zerofuelWlbsint);
