@@ -4,6 +4,7 @@
  The pilot can thus view planned loads, load status, ... 
 *) Checklists Software like SWISS one
 
+Add switch to change between BEM for No pax seats...
 
 Structure:
 

@@ -53,8 +53,7 @@ function fuelcalculate() {
 
 function wbcalculate(){
    // BEM --> Change to standard BEM: 
-   var emptyweightget = 1051;
-   var emptyweightW = parseInt(emptyweightget);
+   var emptyweightW = 1051;
    var emptyweightA = 1912;
    var emptyweightM = emptyweightW * emptyweightA;
    // Station cockpit
