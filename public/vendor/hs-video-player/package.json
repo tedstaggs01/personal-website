@@ -9,7 +9,7 @@
   "author": "HS",
   "dependencies": {
     "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-env": "^7.22.6",
     "babel-loader": "^8.0.6",
     "core-js": "^3.6.5",
     "gulp": "^4.0.2",
