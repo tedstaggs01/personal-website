@@ -7,13 +7,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tedstaggs01/personal-website.git"
   },
-  "author": "Ted Staggs",
+  "author": "Ted Staggs",  
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tedstaggs01/personal-website/issues"
