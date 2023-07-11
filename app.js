@@ -16,7 +16,6 @@ const db = mysql.createConnection({
 
 const publicDirectory = path.join(__dirname, '');
 app.use(express.static(publicDirectory));
-
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
