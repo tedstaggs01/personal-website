@@ -14,8 +14,11 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
-const publicDirectory = path.join(__dirname, './public/css/');
+const publicDirectory = path.join(__dirname, '');
 app.use(express.static(publicDirectory));
+
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 app.set('view engine', 'hbs');
 
@@ -27,19 +30,11 @@ db.connect((error) => {
     }
 })
 
-app.get('/', (req, res) => {
-    res.render('menu')
-});
-
-app.get('/register', (req, res) => {
-    res.render('register')
-})
-
-app.get('/login', (req, res) => {
-    res.render('login')
-})
+// Routes
+app.use('/', require('./routes/pages'))
+app.use('/auth', require('./routes/auth'))
 
 app.listen(3000, () => {
-    console.log("Server started on port 3000");
+    console.log("Server started on port 3000")
 })
 
