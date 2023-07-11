@@ -82,25 +82,33 @@
     <section>
         <div class="container d-flex flex-column">
             <div class="row align-items-center justify-content-center min-vh-100">
-                <div class="col-md-6 col-lg-5 col-xl-4 py-6 py-md-0">
+                <div class="col-md-8 col-lg-5 py-6">
                     <div>
                         <div class="mb-5 text-center">
-                            <span class="d-inline-block d-lg-block h1 mb-lg-6 me-3">👋</span>
-                            <h6 class="h3 mb-1">Welcome Back! </h6>
-                            <p class="text-muted mb-0">Sign in to your account to continue.</p>
+                            <h6 class="h3 mb-1">Create your account</h6>
+                            <p class="text-muted mb-0">Few steps away from getting access!</p> 
                         </div>
                         <span class="clearfix"></span>
                         <form>
                             <div class="form-group">
-                                <label class="form-control-label">Email address</label>
-                                <div class="input-group">
+                                <label class="form-control-label">Name</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control form-control-prepend" id="input-name" placeholder="John Ive">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i data-feather="user"></i></span>
                                     </div>
-                                    <input type="email" class="form-control" id="input-email" placeholder="name@example.com">
                                 </div>
                             </div>
-                            <div class="form-group mb-0">
+                            <div class="form-group">
+                                <label class="form-control-label">Email address</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="email" class="form-control form-control-prepend" id="input-email" placeholder="name@example.com">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i data-feather="at-sign"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <label class="form-control-label">Password</label>
@@ -109,15 +117,21 @@
                                         <a href="#" class="small text-muted text-underline--dashed border-primary" data-toggle="password-text" data-target="#input-password">Show password</a>
                                     </div>
                                 </div>
-                                <div class="input-group">
+                                <div class="input-group input-group-merge">
+                                    <input type="password" class="form-control form-control-prepend" id="input-password" placeholder="********">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i data-feather="key"></i></span>
                                     </div>
-                                    <input type="password" class="form-control" id="input-password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="check-terms">
+                                    <label class="custom-control-label" for="check-terms">I agree to the <a href="../../pages/utility/terms.html">terms and conditions</a></label>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button type="button" class="btn btn-block btn-primary">Sign in</button>
+                                <button type="button" class="btn btn-block btn-primary">Create my account</button>
                             </div>
                         </form>
                         <div class="py-3 text-center">
@@ -139,8 +153,8 @@
                             </div>
                         </div>
                         <!-- Links -->
-                        <div class="mt-4 text-center"><small>Not registered?</small>
-                            <a href="sign_up.html" class="small font-weight-bold">Create account</a>
+                        <div class="mt-4 text-center"><small>Already have an acocunt?</small>
+                            <a href="sign_in.html" class="small font-weight-bold">Sign in</a>
                         </div>
                     </div>
                 </div>
