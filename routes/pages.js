@@ -14,4 +14,8 @@ router.get('/signin', (req, res) => {
     res.render('signin')
 })
 
+router.get('/pilot', (req, res) => {
+    res.render('pilot')
+})
+
 module.exports = router; 
