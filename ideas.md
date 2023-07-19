@@ -23,3 +23,4 @@ The website host shall not be liable for any loss or damage including without li
 Every effort is made to keep the website up and running smoothly. However, the website host takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
 
 By using this website, you agree to this disclaimer and accept that the website host shall not be held liable for any inaccuracies or errors in the information provided.
+
