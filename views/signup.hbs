@@ -113,7 +113,7 @@
                                         <label class="form-control-label">Password</label>
                                     </div>
                                     <div class="mb-2">
-                                        <a href="#" class="small text-muted text-underline--dashed border-primary" data-toggle="password-text" data-target="#input-password">Show password</a>
+                                        <a onclick="showpassword()" class="small text-muted text-underline--dashed border-primary" data-toggle="password-text" data-target="#input-password">Show password</a>
                                     </div>
                                 </div>
                                 <div class="input-group input-group-merge">
@@ -161,6 +161,16 @@
         </div>
     </section>
     <!-- Core JS  -->
+    <script>
+        function showpassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text"; 
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
     <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/libs/svg-injector/dist/svg-injector.min.js"></script>
