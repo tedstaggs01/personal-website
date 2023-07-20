@@ -10,7 +10,7 @@
   "dependencies": {
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^9.0.0",
     "core-js": "^3.6.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -18,8 +18,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.4.1",
-    "webpack": "^4.41.6",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.1.1",
+    "webpack-stream": "^7.0.0"
   },
   "devDependencies": {
     "babel-preset-es2015-ie": "^6.7.0",
