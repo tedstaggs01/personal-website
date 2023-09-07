@@ -1,0 +1,24 @@
+img {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: black;
+}
+
+.description {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.footer {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
